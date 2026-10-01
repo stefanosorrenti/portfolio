@@ -3,10 +3,12 @@ import AppNavBar from "./AppNavBar";
 export default function AppHeader() {
 
     return (
-
-        <>
-            <h1>HEADER</h1>
+        /* HEADER */
+        <header className="container mx-auto ">
+            {/* NavBar */}
             <AppNavBar />
-        </>
+
+        </header>
+
     )
 }
