@@ -4,7 +4,7 @@ export default function AppHeader() {
 
     return (
         /* HEADER */
-        <header className="container mx-auto ">
+        <header className="container mx-auto">
             {/* NavBar */}
             <AppNavBar />
 
