@@ -11,10 +11,10 @@ export default function AppNavBar() {
             {/* Developer Name */}
 
             <div className="flex items-center gap-5 shrink-0">
-                <span className="font-bold text-4xl">SS</span>
-                <p className="flex flex-col text-md font-medium">
+                <span className="font-logo text-[2.7rem] leading-none font-normal tracking-[-0.06em]">SS</span>
+                <p className="flex flex-col text-lg leading-6 font-medium">
                     Stefano Sorrenti
-                    <small className="text-muted text-xs font-normal">WEB DEVELOPER</small>
+                    <small className="text-muted text-[0.6rem] leading-[0.9rem] font-semibold tracking-[0.2em]">WEB DEVELOPER</small>
                 </p>
             </div>
 
@@ -22,7 +22,7 @@ export default function AppNavBar() {
 
             {/* Navigation Links */}
 
-            <div className="flex items-center justify-end gap-5 text-md font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer shrink-0 p-3 *:p-1  *:focus:bg-brand/10 *:focus:text-brand *:rounded-full">
+            <div className="flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer shrink-0 p-3 *:p-1  *:focus:bg-brand/10 *:focus:text-brand *:rounded-full">
 
                 <NavLink className="" to="#home">Home</NavLink>
                 <NavLink to="#about">Chi sono</NavLink>

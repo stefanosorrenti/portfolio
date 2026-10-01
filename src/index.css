@@ -1,7 +1,9 @@
+@import url("https://rsms.me/inter/inter.css");
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "InterVariable", ui-sans-serif, system-ui, sans-serif;
+  --font-logo: "Times New Roman", Times, serif;
 
   --color-canvas: #fafbfd;
   --color-soft: #f0f5fa;
