@@ -6,7 +6,7 @@ export default function AppNavBar() {
 
     return (
 
-        <nav className="border-b border-line bg-canvas min-h-14 flex items-center p-4 gap-11" id="home" aria-label="Main Navigation">
+        <nav className="container mx-auto bg-canvas min-h-14 flex items-center p-4 gap-11" id="home" aria-label="Main Navigation">
 
             {/* Developer Name */}
 
@@ -18,13 +18,13 @@ export default function AppNavBar() {
                 </p>
             </div>
 
-            <span aria-hidden="true" className="h-12 w-px shrink-0 bg-line" />
+            <span aria-hidden="true" className="h-12 w-px shrink-0 bg-line" /> {/* Separator */}
 
             {/* Navigation Links */}
 
-            <div className="flex items-center justify-end gap-5 text-md font-medium grow">
+            <div className="flex items-center justify-end gap-5 text-md font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer shrink-0 p-3 *:p-1  *:focus:bg-brand/10 *:focus:text-brand *:rounded-full">
 
-                <NavLink to="#home">Home</NavLink>
+                <NavLink className="" to="#home">Home</NavLink>
                 <NavLink to="#about">Chi sono</NavLink>
                 <NavLink to="#projects">Progetti</NavLink>
                 <NavLink to="#contact">Contatti</NavLink>
@@ -32,7 +32,8 @@ export default function AppNavBar() {
             </div>
 
 
-            <span aria-hidden="true" className="h-12 w-px shrink-0 bg-line" />
+            <span aria-hidden="true" className="h-12 w-px shrink-0 bg-line" /> {/* Separator */}
+
             {/* Settings menu */}
 
             <div className="flex items-center gap-5 text-md font-medium cursor-pointer shrink-0 p-3">
