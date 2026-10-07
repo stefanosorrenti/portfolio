@@ -16,9 +16,10 @@ export default function AppHeroSection() {
                 {/* Title and description */}
 
                 <div>
-                    <small>DIFFERENT BACKGROUND. SAME VISION.</small>
-                    <h1>From optics<br />to code.</h1>
-                    <p>I'm Stefano Sorrenti, a Junior Full Stack Web Developer with a creative
+                    <small className="text-muted">DIFFERENT BACKGROUND. SAME VISION.</small>
+                    <h1 className="text-3xl font-bold ">From optics<br /><span className="text-brand">to code.</span></h1>
+                    <p className="text-lg text-muted">
+                        I'm Stefano Sorrenti, a Junior Full Stack Web Developer with a creative
                         mind, an eye for detail and a constant desire to learn.
                     </p>
                 </div>
@@ -27,12 +28,12 @@ export default function AppHeroSection() {
                 {/* Links */}
 
                 <div>
-                    <Link>View Project</Link>
-                    <Link>Download CV</Link>
+                    <Link className="bg-brand text-white px-4 py-2 rounded">View Projects</Link>
+                    <Link className="border border-muted px-4 py-2 rounded">Download CV</Link>
                 </div>
 
 
-                
+
             </div>
 
             {/* Potrait column */}
