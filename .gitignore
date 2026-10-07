@@ -12,6 +12,7 @@ docs
 dist
 dist-ssr
 *.local
+/src/assets/portrait-placeholder.svg
 
 # Editor directories and files
 .vscode/*
