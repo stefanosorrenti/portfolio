@@ -28,7 +28,7 @@ export default function AppHeroSection() {
                 {/* Links */}
 
                 <div className="flex flex-wrap items-center gap-4">
-                    <Link className="inline-flex h-7 items-center justify-center gap-2 rounded-[3px] bg-brand px-[19px] text-[9px] font-medium text-white lg:h-11 lg:px-6 lg:text-sm" to="/projects">
+                    <Link className="inline-flex h-7 items-center justify-center gap-2 rounded-[3px] bg-brand px-[19px] text-[9px] font-medium text-white lg:h-11 lg:px-6 lg:text-sm" to="#projects">
                         View projects <span aria-hidden="true">→</span>
                     </Link>
                     <Link className="inline-flex h-7 items-center justify-center rounded-[3px] border border-faint px-[22px] text-[9px] font-medium text-ink lg:h-11 lg:px-7 lg:text-sm" to="/#contact">
