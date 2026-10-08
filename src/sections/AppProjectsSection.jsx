@@ -1,6 +1,6 @@
+import AppProjectCard from "../components/AppProjectCard";
+
 export default function AppProjectsSection() {
-
-
     return (
 
         /* Projects section */
@@ -18,7 +18,9 @@ export default function AppProjectsSection() {
 
             {/* Projects */}
 
-            <div></div>
+            <div>
+                <AppProjectCard />
+            </div>
 
         </section>
     )
