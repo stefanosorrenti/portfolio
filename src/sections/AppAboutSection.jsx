@@ -20,7 +20,7 @@ export default function AppAboutSection() {
                     {/* Title */}
 
                     <div className="lg:col-span-4">
-                        <span className="mb-[9px] block text-[11px] leading-[14px] font-medium tracking-[0.32em] text-outline">ABOUT</span>
+                        <span className="mb-[9px] block text-[11px] leading-[14px] font-medium tracking-[0.32em] text-muted">ABOUT</span>
                         <h2 className="text-[34px] leading-[1.03] font-bold tracking-[-0.04em] text-ink sm:text-[38px]">A sharper way<br />to see <span className="text-brand">solutions.</span></h2>
                     </div>
 

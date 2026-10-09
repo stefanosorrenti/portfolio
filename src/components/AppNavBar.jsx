@@ -9,7 +9,7 @@ export default function AppNavBar() {
 
     return (
 
-        <nav className="container mx-auto bg-canvas min-h-14 flex justify-between md:justify-normal flex-wrap md:flex-nowrap items-center p-4 gap-11" id="home" aria-label="Main Navigation">
+        <nav className="container mx-auto min-h-14 flex justify-between md:justify-normal flex-wrap md:flex-nowrap items-center p-4 gap-11" id="home" aria-label="Main Navigation">
 
             {/* Developer Name */}
 

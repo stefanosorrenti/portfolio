@@ -1,7 +1,7 @@
 export default function AppMyValuesSections() {
     return (
         <section
-            className="container mx-auto px-[27px] py-9 lg:pt-[18px] lg:pb-[26px] bg-canvas"
+            className="container mx-auto px-[27px] py-9 lg:pt-[18px] lg:pb-[26px]  bg-canvas"
             aria-label="My values section"
         >
             <h3 className="mb-2 text-xs leading-4 font-medium tracking-[0.24em] text-muted uppercase">
@@ -33,12 +33,12 @@ export default function AppMyValuesSections() {
                         </svg>
 
                         {/* Content */}
-                        
+
                         <div>
                             <h4 className="text-lg leading-snug font-semibold tracking-tight text-ink">
                                 Creativity
                             </h4>
-                            <p className="mt-1 text-base leading-normal text-muted lg:text-[13.5px]">
+                            <p className="mt-1 text-base leading-normal text-body lg:text-[13.5px]">
                                 I enjoy turning ideas into simple and effective solutions.
                             </p>
                         </div>
@@ -68,7 +68,7 @@ export default function AppMyValuesSections() {
                             <h4 className="text-lg leading-snug font-semibold tracking-tight text-ink">
                                 Precision
                             </h4>
-                            <p className="mt-1 text-base leading-normal text-muted lg:text-[13.5px]">
+                            <p className="mt-1 text-base leading-normal text-body lg:text-[13.5px]">
                                 My background in optics taught me to value accuracy in every detail.
                             </p>
                         </div>
@@ -99,7 +99,7 @@ export default function AppMyValuesSections() {
                             <h4 className="text-lg leading-snug font-semibold tracking-tight text-ink">
                                 Continuous Learning
                             </h4>
-                            <p className="mt-1 text-base leading-normal text-muted lg:text-[13.5px]">
+                            <p className="mt-1 text-base leading-normal text-body lg:text-[13.5px]">
                                 I’m always exploring new tools, technologies and perspectives to improve.
                             </p>
                         </div>

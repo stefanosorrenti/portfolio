@@ -7,7 +7,7 @@ export default function AppHeroSection() {
     return (
         /* Hero Section */
 
-        <section className="container mx-auto grid grid-cols-1 gap-8 px-6 md:grid-cols-2 md:gap-4 md:px-3" aria-label="Hero Section">
+        <section className="container mx-auto grid grid-cols-1 gap-8 px-6 md:grid-cols-2 md:gap-4 md:px-3 bg-canvas" aria-label="Hero Section">
 
             {/* Description column */}
 
@@ -16,7 +16,7 @@ export default function AppHeroSection() {
                 {/* Title and description */}
 
                 <div className="mb-5 md:mb-3 lg:mb-6">
-                    <small className="mb-3 block text-[7px] leading-none font-semibold tracking-[0.32em] text-outline lg:mb-5 lg:text-[10px]">DIFFERENT BACKGROUND. SAME VISION.</small>
+                    <small className="mb-3 block text-[7px] leading-none font-semibold tracking-[0.32em] text-muted lg:mb-5 lg:text-[10px]">DIFFERENT BACKGROUND. SAME VISION.</small>
                     <h1 className="text-[44px] leading-[0.88] font-extrabold tracking-[-0.045em] text-ink md:text-[48px] lg:text-[64px] xl:text-[72px]">From optics<br />to <span className="text-brand">code.</span></h1>
                     <p className="mt-4 max-w-[285px] text-[11px] leading-[1.3] text-body lg:mt-6 lg:max-w-[430px] lg:text-base">
                         I'm Stefano Sorrenti, a Junior Full Stack Web Developer with a creative
@@ -28,10 +28,10 @@ export default function AppHeroSection() {
                 {/* Links */}
 
                 <div className="flex flex-wrap items-center gap-4">
-                    <Link className="inline-flex h-7 items-center justify-center gap-2 rounded-[3px] bg-brand px-[19px] text-[9px] font-medium text-white lg:h-11 lg:px-6 lg:text-sm" to="#projects">
+                    <Link className="inline-flex h-7 items-center justify-center gap-2 rounded-[3px] bg-action px-[19px] text-[9px] font-medium text-white lg:h-11 lg:px-6 lg:text-sm" to="#projects">
                         View projects <span aria-hidden="true">→</span>
                     </Link>
-                    <Link className="inline-flex h-7 items-center justify-center rounded-[3px] border border-faint px-[22px] text-[9px] font-medium text-ink lg:h-11 lg:px-7 lg:text-sm" to="/#contact">
+                    <Link className="inline-flex h-7 items-center justify-center rounded-[3px] border border-outline px-[22px] text-[9px] font-medium text-ink lg:h-11 lg:px-7 lg:text-sm" to="/#contact">
                         Download CV
                     </Link>
                 </div>
