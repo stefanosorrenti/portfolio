@@ -1,4 +1,5 @@
 import AppAboutSection from "../sections/AppAboutSection";
+import AppContactSection from "../sections/AppContactSection";
 import AppHeroSection from "../sections/AppHeroSection";
 import AppMyValuesSections from "../sections/AppMyValuesSections";
 import AppProjectsSection from "../sections/AppProjectsSection";
@@ -15,6 +16,7 @@ export function AppHomePage() {
             <AppMyValuesSections />
             <AppProjectsSection />
             <AppTechStackSection />
+            <AppContactSection />
         </>
     )
 }

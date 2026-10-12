@@ -13,12 +13,12 @@ export default function AppTechStackSection() {
 
             {/* Tech stacks list */}
 
-            <ul className="grid grid-cols-3 p-5 gap-4 md:grid-cols-4 md:gap-6 lg:flex lg:flex-wrap lg:justify-evenly">
+            <ul className="grid grid-cols-3 p-3 gap-4 md:grid-cols-4 md:gap-6 lg:flex lg:flex-wrap lg:justify-evenly">
 
                 {technologies.map((tech) => (
                     <li key={tech.id}>
                         <div className="flex flex-col items-center gap-2">
-                            <StackIcon name={tech.icon} className="w-8 h-8" /> {/* Icon */}
+                            <StackIcon name={tech.icon} className="w-10 h-10" /> {/* Icon */}
                             <span>{tech.name}</span> {/* Name */}
                         </div>
                     </li>
