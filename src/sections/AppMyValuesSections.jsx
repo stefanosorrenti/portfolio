@@ -5,7 +5,7 @@ export default function AppMyValuesSections() {
             aria-label="My values section"
         >
             <h3 className="mb-2 text-xs leading-4 font-medium tracking-[0.24em] text-muted uppercase">
-                MY VALUES
+                My values
             </h3>
 
             <ul className="grid divide-y divide-line lg:-ml-8 lg:grid-cols-3 lg:divide-x lg:divide-y-0">

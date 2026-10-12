@@ -2,7 +2,6 @@ export default function AppAboutSection() {
 
 
 
-
     return (
 
         /* About section */
@@ -16,7 +15,7 @@ export default function AppAboutSection() {
                 {/* About */}
 
                 <div className="grid items-start gap-[27px] lg:grid-cols-12">
-
+                    
                     {/* Title */}
 
                     <div className="lg:col-span-4">
