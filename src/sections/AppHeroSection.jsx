@@ -1,50 +1,55 @@
-import { Link } from "react-router-dom";
+import portraitPlaceholder from "../assets/portrait-placeholder.svg";
 
 export default function AppHeroSection() {
-
-
-
     return (
+        <section className="container mx-auto flex min-h-[calc(100dvh-81px)] flex-col justify-around gap-10 px-4 py-8 sm:gap-12 sm:px-6 sm:py-10 lg:gap-16 lg:px-8 lg:py-12 2xl:px-12">
+            <div className="grid shrink-0 grid-cols-1 gap-6 md:grid-cols-2 md:items-start lg:gap-12 xl:gap-16 2xl:gap-20">
 
-        /* Hero Section */
-        <>
-            <section className="container mx-auto p-4 h-screen flex flex-col justify-around">
+                {/* Description column */}
+                <div className="min-w-0 md:pt-4 lg:pt-6">
+                    <span className="mb-3 block text-[10px] leading-relaxed font-semibold tracking-[0.2em] text-outline md:mb-5 lg:mb-6 lg:text-[11px] lg:tracking-[0.24em]">
+                        DIFFERENT BACKGROUND. SAME VISION.
+                    </span>
+                    <h1 className="text-[44px] leading-[0.98] font-extrabold tracking-[-0.03em] text-ink sm:text-[56px] md:text-[60px] lg:text-[80px] xl:text-[96px]">
+                        From optics<br />
+                        to <span className="text-brand">code.</span>
+                    </h1>
+                    <p className="mt-6 mb-6 max-w-sm text-sm leading-relaxed text-body sm:max-w-md md:mb-7 md:max-w-full lg:mt-8 lg:mb-8 lg:max-w-[420px] lg:text-base xl:max-w-[460px] xl:text-lg">
+                        I'm Stefano Sorrenti, a Junior Full Stack Web Developer with a creative
+                        mind, an eye for detail and a constant desire to learn.
+                    </p>
 
-                {/* Grid container */}
-                <div className="grid grid-cols-1 md:grid-cols-2">
-
-                    {/* Description column */}
-
-                    <div>
-                        <span className="mb-3 block text-[8px] leading-none font-semibold tracking-[0.32em] text-outline md:text-[10px] lg:mb-5 lg:text-[13px]">DIFFERENT BACKGROUNDS. SAME VISION</span>
-                        <h1 className="text-[44px] leading-[0.88] font-extrabold tracking-[-0.045em] text-ink md:text-[48px] lg:text-[64px] xl:text-[72px]">FORM OPTICS <br /> TO <span className="text-brand">CODE.</span></h1>
-                        <p className="mt-10 mb-5 max-w-[285px] text-[13px] leading-[1.3] text-body lg:mt-6 lg:max-w-[430px] lg:text-base">I'm Stefano Sorrenti, a Junior Full Stack Web Developer with a creative
-                            mind, an eye for detail and a constant desire to learn.
-                        </p>
-
-                        {/* CTA Button */}
-                        <div className="flex flex-wrap items-center gap-4">
-                            <button className="inline-flex h-8 items-center justify-center gap-2 rounded-[3px] bg-brand px-[19px] text-[9px] font-medium text-white lg:h-11 lg:px-6 lg:text-sm">View Projects</button>
-                            <button className=" inline-flex h-8 items-center justify-center rounded-[3px] border border-faint px-[22px] text-[9px] font-medium text-ink lg:h-11 lg:px-7 lg:text-sm">Downlaod CV</button>
-                        </div>
+                    {/* CTA buttons */}
+                    <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6">
+                        <button className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] bg-brand px-4 py-2 text-sm font-medium text-white sm:px-6 lg:min-h-12 lg:px-8">
+                            View projects <span aria-hidden="true">&rarr;</span>
+                        </button>
+                        <button className="inline-flex min-h-11 items-center justify-center rounded-[3px] border border-faint px-4 py-2 text-sm font-medium text-ink sm:px-6 lg:min-h-12 lg:px-8">
+                            Get in touch
+                        </button>
                     </div>
+                </div>
 
+                {/* Portrait and anchored caption */}
+                <div className="relative hidden min-w-0 justify-start md:flex md:place-self-end xl:place-self-auto">
 
-                    {/* Portrait column */}
-                    <div className="hidden md:flex flex-col items-end">
-                        <img src="src\assets\portrait-placeholder.svg" alt="Portrait" />
-                        {/* <p>Available for new opportunities</p> */}
+                    {/* Img container */}
+                    <div className="w-full min-w-0c xl:ml-[-30%]">
+                        <img className="h-auto w-full max-w-full lg:max-w-none xl:w-[110%]" src={portraitPlaceholder} alt="Portrait" />
                     </div>
-
-
+                    <p className="absolute top-1/2 right-0 w-18 -translate-y-1/2 text-start text-[9px] leading-[1.6] font-semibold tracking-[0.1em] text-outline uppercase before:mx-auto before:mb-3 before:block before:h-0.5 before:w-5 before:bg-brand lg:w-24 lg:text-[10px] lg:tracking-[0.15em] lg:before:w-7">
+                        Curiosity.<br />New<br />Perspective.
+                    </p>    
                 </div>
-                {/* Scroll to explore */}
-                <div className="flex flex-col items-center gap-2 *:text-xs *:text-muted border-t border-faint pt-4 md:border-t-0 md:border-l md:border-faint md:flex-row md:justify-between md:p-4 md::*:text-2xl">
-                    <p>Based in Tuscany, Italy</p>
-                    <p>Scroll to explore <span className="text-brand">↓</span></p>
-                </div>
-            </section >
+            </div>
 
-        </>
-    )
+            {/* Hero footer */}
+            <div className="flex shrink-0 flex-col items-center gap-2 border-t border-faint pt-4 text-xs text-muted md:flex-row md:justify-between md:gap-6 md:border-0 md:pt-0 md:text-[10px] md:font-semibold md:tracking-[0.22em] md:uppercase lg:text-[11px]">
+                <p className="md:order-2 md:text-right">Based in Tuscany, Italy</p>
+                <p className="md:order-1 md:flex md:min-h-10 md:items-center md:border-l md:border-faint md:pl-6">
+                    Scroll to explore <span className="text-brand md:hidden">&darr;</span>
+                </p>
+            </div>
+        </section>
+    );
 }
