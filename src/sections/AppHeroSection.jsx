@@ -3,9 +3,11 @@ import portraitPlaceholder from "../assets/portrait-placeholder.svg";
 export default function AppHeroSection() {
     return (
         <section className="container mx-auto flex min-h-[calc(100dvh-81px)] flex-col justify-around gap-10 px-4 py-8 sm:gap-12 sm:px-6 sm:py-10 lg:gap-16 lg:px-8 lg:py-12 2xl:px-12">
+            
             <div className="grid shrink-0 grid-cols-1 gap-6 md:grid-cols-2 md:items-start lg:gap-12 xl:gap-16 2xl:gap-20">
 
                 {/* Description column */}
+
                 <div className="min-w-0 md:pt-4 lg:pt-6">
                     <span className="mb-3 block text-[10px] leading-relaxed font-semibold tracking-[0.2em] text-outline md:mb-5 lg:mb-6 lg:text-[11px] lg:tracking-[0.24em]">
                         DIFFERENT BACKGROUND. SAME VISION.
@@ -20,6 +22,7 @@ export default function AppHeroSection() {
                     </p>
 
                     {/* CTA buttons */}
+
                     <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6">
                         <button className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] bg-brand px-4 py-2 text-sm font-medium text-white sm:px-6 lg:min-h-12 lg:px-8">
                             View projects <span aria-hidden="true">&rarr;</span>
@@ -31,9 +34,11 @@ export default function AppHeroSection() {
                 </div>
 
                 {/* Portrait and anchored caption */}
+
                 <div className="relative hidden min-w-0 justify-start md:flex md:place-self-end xl:place-self-auto">
 
                     {/* Img container */}
+
                     <div className="w-full min-w-0c xl:ml-[-30%]">
                         <img className="h-auto w-full max-w-full lg:max-w-none xl:w-[110%]" src={portraitPlaceholder} alt="Portrait" />
                     </div>
@@ -44,12 +49,14 @@ export default function AppHeroSection() {
             </div>
 
             {/* Hero footer */}
+
             <div className="flex shrink-0 flex-col items-center gap-2 border-t border-faint pt-4 text-xs text-muted md:flex-row md:justify-between md:gap-6 md:border-0 md:pt-0 md:text-[10px] md:font-semibold md:tracking-[0.22em] md:uppercase lg:text-[11px]">
                 <p className="md:order-2 md:text-right">Based in Tuscany, Italy</p>
                 <p className="md:order-1 md:flex md:min-h-10 md:items-center md:border-l md:border-faint md:pl-6">
                     Scroll to explore <span className="text-brand md:hidden">&darr;</span>
                 </p>
             </div>
+
         </section>
     );
 }
