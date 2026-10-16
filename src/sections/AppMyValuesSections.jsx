@@ -1,6 +1,9 @@
 export default function AppMyValuesSections() {
     return (
         <div className="border-b border-line md:py-2 lg:py-5 xl:py-7">
+
+            {/* My values section */}
+            
             <section
                 className="container mx-auto px-[27px] py-9 lg:pt-[18px] lg:pb-[26px]  bg-canvas"
                 aria-label="My values section"
@@ -47,9 +50,12 @@ export default function AppMyValuesSections() {
                     </li>
 
                     {/* Precision */}
+
                     <li className="py-6 md:py-8 lg:px-6 lg:py-3 xl:px-10">
                         <div className="flex items-start gap-6 md:gap-7 lg:gap-4 xl:gap-6">
+
                             {/* Icon */}
+
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -65,6 +71,7 @@ export default function AppMyValuesSections() {
                             </svg>
 
                             {/* Content */}
+
                             <div>
                                 <h4 className="text-lg leading-snug font-semibold tracking-tight text-ink md:text-xl xl:text-2xl">
                                     Precision
@@ -73,12 +80,15 @@ export default function AppMyValuesSections() {
                                     My background in optics taught me to value accuracy in every detail.
                                 </p>
                             </div>
+
                         </div>
                     </li>
 
                     {/* Continuous Learning */}
+
                     <li className="pt-6 md:pt-8 lg:py-3 lg:pl-6 xl:pl-10">
                         <div className="flex items-start gap-6 md:gap-7 lg:gap-4 xl:gap-6">
+
                             {/* Icon */}
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -96,6 +106,7 @@ export default function AppMyValuesSections() {
                             </svg>
 
                             {/* Content */}
+
                             <div>
                                 <h4 className="text-lg leading-snug font-semibold tracking-tight text-ink md:text-xl xl:text-2xl">
                                     Continuous Learning
@@ -104,6 +115,7 @@ export default function AppMyValuesSections() {
                                     I’m always exploring new tools, technologies and perspectives to improve.
                                 </p>
                             </div>
+                            
                         </div>
                     </li>
                 </ul>
