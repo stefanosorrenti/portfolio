@@ -84,9 +84,9 @@ export default function AppSettings({ onClose }) {
                     <section className="py-4 lg:py-5">
                         <h4 className="text-sm font-semibold">Colore principale</h4>
                         <p className="mt-1 text-xs leading-5 text-muted">Personalizza il colore principale del sito. Il nuovo colore verrà applicato a tutti gli elementi principali.</p>
-                        <div className="mt-4 flex flex-col justify-center items-start gap-3 lg:flex-row lg:justify-center lg:items-center">
-                            <HexColorPicker color={color} onChange={setColor} />
-                            <HexColorInput color={color} onChange={setColor} className='text-center border border-line bg-surface py-2 pr-10 pl-10 text-sm text-ink rounded-md' />
+                        <div className="mt-4 flex flex-col gap-4 rounded-xl border border-line bg-surface p-4 md:gap-5 md:p-5 lg:flex-row lg:items-center">
+                            <HexColorPicker color={color} onChange={setColor} className="max-h-52! w-full! gap-3!" />
+                            <HexColorInput prefixed color={color} onChange={setColor} className="min-h-11 w-full rounded-lg border border-line bg-surface px-3 py-2 text-center font-mono text-base tracking-wider focus-visible:border-brand d lg:w-28 lg:shrink-0" />
                         </div>
 
                     </section>
