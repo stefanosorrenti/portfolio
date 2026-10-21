@@ -1,10 +1,25 @@
 
-import { HexColorPicker, HexColorInput  } from 'react-colorful';
+import { HexColorPicker, HexColorInput } from 'react-colorful';
 import { useState } from 'react';
 
 export default function AppSettings({ onClose, onOpen }) {
-    
-    const [color, setColor] = useState('#000000');
+
+    //DATA
+    const brandColor = getComputedStyle(document.documentElement).getPropertyValue('--color-brand');
+
+    //USE STATE
+
+    const [color, setColor] = useState(brandColor);
+
+
+    //FUNCTIONS
+    function handleSave() {
+        document.documentElement.style.setProperty('--color-brand', color);
+
+        onClose()
+    }
+
+
     return (
 
         /* Backdrop */
@@ -62,7 +77,7 @@ export default function AppSettings({ onClose, onOpen }) {
                     {/* Buttons */}
                     <div>
                         <button onClick={onClose}>Cancel</button>
-                        <button onClick={() => console.log(color)}>Save</button>
+                        <button onClick={handleSave}>Save</button>
                     </div>
                 </section>
 
