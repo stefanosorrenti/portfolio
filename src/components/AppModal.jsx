@@ -37,13 +37,13 @@ export default function AppModal({ onClose }) {
 
                             {/* Image */}
                             <div className="relative mt-5 mb-8 md:mb-24">
-                                <div className="aspect-5/3 overflow-hidden rounded-lg border border-line bg-soft">
+                                <figure className="aspect-5/3 overflow-hidden rounded-lg border border-line bg-soft">
                                     <img
                                         className="h-full w-full object-cover"
                                         src="https://linda-hoang.com/wp-content/uploads/2014/10/img-placeholder-dark.jpg"
                                         alt="placeholder"
                                     />
-                                </div>
+                                </figure>
                                 {/* <button type="button" disabled aria-label="Immagine precedente" className="absolute top-1/2 -left-3 inline-flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-surface/95 text-ink shadow-sm md:left-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.75} stroke="currentColor" className="size-5" aria-hidden="true">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M19 12H5m0 0 7-7m-7 7 7 7" />
