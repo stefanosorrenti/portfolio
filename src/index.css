@@ -1,6 +1,8 @@
 @import url("https://rsms.me/inter/inter.css");
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "InterVariable", ui-sans-serif, system-ui, sans-serif;
   --font-logo: "Times New Roman", Times, serif;
@@ -19,6 +21,27 @@
   --color-line: #e5ebf2;
   --color-outline: #73839c;
   --color-optical: #b0baca;
+}
+
+.dark {
+  color-scheme: dark;
+
+  /* Representative colors sampled from the dark reference image. */
+  --color-canvas: #131519;
+  --color-soft: #131519;
+  --color-surface: #16191f;
+  --color-ink: #eff2f6;
+  --color-body: #c1ccd6;
+  --color-muted: #b3c2ce;
+  --color-faint: #404b59;
+  --color-brand: #729cfc;
+  --color-action: #719bfe;
+  /* The reference does not show a hover state; reuse the sampled action color. */
+  --color-action-hover: #719bfe;
+  --color-badge: #1b2029;
+  --color-line: #2b3541;
+  --color-outline: #c1d1e3;
+  --color-optical: #657184;
 }
 
 @layer base {

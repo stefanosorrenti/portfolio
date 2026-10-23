@@ -65,24 +65,21 @@ export default function AppSettings({ onClose }) {
                     </section>
 
                     {/* Dark mode toggle */}
-                    <section className="flex items-center justify-between gap-4 border-b border-line py-4 lg:py-5">
-                        <div>
+                    <section className="flex items-center border-b border-line py-4 lg:py-5">
+                        <div className="basis-11/12">
                             <h4 id="dark-mode-label" className="text-sm font-semibold">Dark mode</h4>
-                            <p id="dark-mode-description" className="mt-1 text-xs leading-5 text-muted">Attiva la modalità scura per un’esperienza più confortevole.</p>
+                            <p id="dark-mode-description" className="mt-1 text-xs leading-5 text-muted">Attiva la modalità scura</p>
                         </div>
-                        {/* <div className="flex shrink-0 items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-muted" aria-hidden="true">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6.5 6.5 0 0 0 8.268 8.268c.343-.215.825-.004.803.401Z" />
-                            </svg>
-                            <button type="button" role="switch" aria-checked="true" aria-labelledby="dark-mode-label" aria-describedby="dark-mode-description" disabled className="flex h-5 w-9 items-center justify-end rounded-full bg-brand p-0.5">
-                                <span className="size-4 rounded-full bg-white" />
-                            </button>
-                        </div> */}
+                        
+                        <div className="flex items-center">
+                            <label htmlFor="dark-mode"></label>
+                            <input type="checkbox" id="dark-mode" className="size-5 lg:size-6 accent-brand" />
+                        </div>
                     </section>
 
                     {/* Color picker */}
                     <section className="py-4 lg:py-5">
-                        <h4 className="text-sm font-semibold">Colore principale</h4>
+                        <h4 className="text-sm font-semibold">Colore principale</h4> 
                         <p className="mt-1 text-xs leading-5 text-muted">Personalizza il colore principale del sito. Il nuovo colore verrà applicato a tutti gli elementi principali.</p>
                         <div className="mt-4 flex flex-col gap-4 rounded-xl border border-line bg-surface p-4 md:gap-5 md:p-5 lg:flex-row lg:items-center">
                             <HexColorPicker color={color} onChange={setColor} className="max-h-52! w-full! gap-3!" />
