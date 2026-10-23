@@ -4,9 +4,12 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+
+  /* FONT TOKENS */
   --font-sans: "InterVariable", ui-sans-serif, system-ui, sans-serif;
   --font-logo: "Times New Roman", Times, serif;
 
+  /* COLOR TOKENS (light mode) */
   --color-canvas: #fafbfd;
   --color-soft: #f0f5fa;
   --color-surface: #fcfdfe;
@@ -15,36 +18,32 @@
   --color-muted: #5c6c84;
   --color-faint: #97a3bc;
   --color-brand: #1456e9;
-  --color-action: #115ad7;
-  --color-action-hover: #0d47b5;
   --color-badge: #eaf1f9;
   --color-line: #e5ebf2;
-  --color-outline: #73839c;
-  --color-optical: #b0baca;
+  
 }
 
 .dark {
   color-scheme: dark;
 
-  /* Representative colors sampled from the dark reference image. */
+  /* COLOR TOKENS (dark mode) */
   --color-canvas: #131519;
-  --color-soft: #131519;
-  --color-surface: #16191f;
+  --color-soft: #252526;
+  --color-surface: #101217;
   --color-ink: #eff2f6;
   --color-body: #c1ccd6;
   --color-muted: #b3c2ce;
   --color-faint: #404b59;
   --color-brand: #729cfc;
-  --color-action: #719bfe;
-  /* The reference does not show a hover state; reuse the sampled action color. */
-  --color-action-hover: #719bfe;
-  --color-badge: #1b2029;
+  --color-badge: #1b2029; 
   --color-line: #2b3541;
-  --color-outline: #c1d1e3;
-  --color-optical: #657184;
+  
 }
 
 @layer base {
+
+  /* BASE STYLES */
+
   html {
     color-scheme: light;
   }
@@ -72,6 +71,9 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+
+  /* ANIMATION PREFERENCES (smooth scrolling) */
+  
   html {
     scroll-behavior: smooth;
   }

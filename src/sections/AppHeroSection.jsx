@@ -9,7 +9,7 @@ export default function AppHeroSection() {
                 {/* Description column */}
 
                 <div className="min-w-0 md:pt-4 lg:pt-6">
-                    <span className="mb-3 block text-[10px] leading-relaxed font-semibold tracking-[0.2em] text-outline md:mb-5 lg:mb-6 lg:text-[11px] lg:tracking-[0.24em]">
+                    <span className="mb-3 block text-[10px] leading-relaxed font-semibold tracking-[0.2em] text-muted md:mb-5 lg:mb-6 lg:text-[11px] lg:tracking-[0.24em]">
                         DIFFERENT BACKGROUND. SAME VISION.
                     </span>
                     <h1 className="text-[44px] leading-[0.98] font-extrabold tracking-[-0.03em] text-ink sm:text-[56px] md:text-[60px] lg:text-[80px] xl:text-[96px]">
@@ -42,7 +42,7 @@ export default function AppHeroSection() {
                     <div className="w-full min-w-0c xl:ml-[-30%]">
                         <img className="h-auto w-full max-w-full lg:max-w-none xl:w-[110%]" src={portraitPlaceholder} alt="Portrait" />
                     </div>
-                    <p className="absolute top-1/2 right-0 w-18 -translate-y-1/2 text-start text-[9px] leading-[1.6] font-semibold tracking-[0.1em] text-outline uppercase before:mx-auto before:mb-3 before:block before:h-0.5 before:w-5 before:bg-brand lg:w-24 lg:text-[10px] lg:tracking-[0.15em] lg:before:w-7">
+                    <p className="absolute top-1/2 right-0 w-18 -translate-y-1/2 text-start text-[9px] leading-[1.6] font-semibold tracking-[0.1em] text-muted uppercase before:mx-auto before:mb-3 before:block before:h-0.5 before:w-5 before:bg-brand lg:w-24 lg:text-[10px] lg:tracking-[0.15em] lg:before:w-7">
                         Curiosity.<br />New<br />Perspective.
                     </p>    
                 </div>

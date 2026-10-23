@@ -23,7 +23,7 @@ export default function AppSettings({ onClose }) {
 
         /* Backdrop */
 
-        <div className="fixed inset-0 z-50 flex items-end justify-center bg-ink/75 md:items-center md:p-6 lg:p-10">
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/75 md:items-center md:p-6 lg:p-10">
 
             {/* Modal content */}
 
