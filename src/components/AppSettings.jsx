@@ -1,18 +1,18 @@
 //IMPORTS
 import { HexColorPicker, HexColorInput } from 'react-colorful';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function AppSettings({ onClose }) {
 
     //DATA
-    
+
     const htmlElement = document.documentElement;
-    
-    
+
+
     //USE STATE
     const [color, setColor] = useState(localStorage.getItem('brandColor') || '#1456e9');
-    
-     
+
+
     //FUNCTIONS
     function handleSave() {
         localStorage.setItem('brandColor', color);
@@ -20,17 +20,33 @@ export default function AppSettings({ onClose }) {
         localStorage.setItem('darkMode', htmlElement.classList.contains('dark') ? 'dark' : 'light')
         onClose()
     }
-    
-    function onCancel () {
-        if(localStorage.getItem('darkMode') === 'dark') {
+
+    function onCancel() {
+        if (localStorage.getItem('darkMode') === 'dark') {
             htmlElement.classList.add('dark')
         } else {
             htmlElement.classList.remove('dark')
         }
 
-        
+
         onClose()
     }
+
+    //USE EFFECT
+    useEffect(() => {
+
+        console.log(onClose)
+        if (!onClose) return
+
+        const original = document.body.style.overflow
+        document.body.style.overflow = 'hidden'
+
+
+        return () => {
+            document.body.style.overflow = original
+        }
+
+    }, [onClose])
     return (
 
         /* Backdrop */
@@ -82,16 +98,16 @@ export default function AppSettings({ onClose }) {
                             <h4 id="dark-mode-label" className="text-sm font-semibold">Dark mode</h4>
                             <p id="dark-mode-description" className="mt-1 text-xs leading-5 text-muted">Attiva la modalità scura</p>
                         </div>
-                        
+
                         <div className="flex items-center">
                             <label htmlFor="dark-mode"></label>
-                            <input type="checkbox" id="dark-mode" className="size-5 lg:size-6 accent-brand" defaultChecked={htmlElement.classList.contains('dark')}  onClick={() =>  htmlElement.classList.toggle('dark')}    />
+                            <input type="checkbox" id="dark-mode" className="size-5 lg:size-6 accent-brand" defaultChecked={htmlElement.classList.contains('dark')} onClick={() => htmlElement.classList.toggle('dark')} />
                         </div>
                     </section>
 
                     {/* Color picker */}
                     <section className="py-4 lg:py-5">
-                        <h4 className="text-sm font-semibold">Colore principale</h4> 
+                        <h4 className="text-sm font-semibold">Colore principale</h4>
                         <p className="mt-1 text-xs leading-5 text-muted">Personalizza il colore principale del sito. Il nuovo colore verrà applicato a tutti gli elementi principali.</p>
                         <div className="mt-4 flex flex-col gap-4 rounded-xl border border-line bg-surface p-4 md:gap-5 md:p-5 lg:flex-row lg:items-center">
                             <HexColorPicker color={color} onChange={setColor} className="max-h-52! w-full! gap-3!" />

@@ -5,14 +5,14 @@ export default function AppMobileMenu({ onClose, onOpen }) {
     return (
 
         
-        <div className="basis-full md:hidden flex flex-col items-center gap-2.5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer  p-3 *:p-1  *:focus:bg-brand/10 *:focus:text-brand *:rounded-full" id="mobile-menu" aria-label="Mobile Navigation">
+        <div className="basis-full md:hidden flex flex-col items-start gap-2.5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer  p-3 *:p-1  *:focus:bg-brand/10 *:focus:text-brand *:rounded-full" id="mobile-menu" aria-label="Mobile Navigation">
 
             {/* Navigation Links */}
             
-            <NavLink to="#home" onClick={onClose}>Home</NavLink>
-            <NavLink to="#about" onClick={onClose}>Chi sono</NavLink>
-            <NavLink to="#projects" onClick={onClose}>Progetti</NavLink>
-            <NavLink to="#contact" onClick={onClose}>Contatti</NavLink>
+            <a href="#home" onClick={onClose}>Home</a>
+            <a href="#about" onClick={onClose}>Chi sono</a>
+            <a href="#projects" onClick={onClose}>Progetti</a>
+            <a href="#contact" onClick={onClose}>Contatti</a>
 
             <button onClick={onOpen}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

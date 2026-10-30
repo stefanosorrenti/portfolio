@@ -4,7 +4,7 @@ export default function AppProjectsSection() {
     return (
 
         /* Projects section */
-        <div className="border-b border-line md:py-2 lg:py-5">
+        <div id="projects" className="border-b border-line md:py-2 lg:py-5">
             <section className="container mx-auto px-[27px] py-9 lg:pt-[18px] lg:pb-[26px] bg-canvas">
 
                 {/* Title and button */}

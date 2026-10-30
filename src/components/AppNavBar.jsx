@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import AppMobileMenu from "./AppMobileMenu";
 import AppSettings from "./AppSettings";
@@ -8,6 +7,8 @@ export default function AppNavBar() {
     //USE STATE
     const [isOpen, setIsOpen] = useState(false)
     const [isSettingsOpen, setIsSettingsOpen] = useState(false)
+
+    
     return (
 
         <nav className="container mx-auto min-h-14 flex justify-between md:justify-normal flex-wrap md:flex-nowrap items-center p-4 gap-11" id="home" aria-label="Main Navigation">
@@ -38,28 +39,28 @@ export default function AppNavBar() {
             </button>
 
             {/* Mobile Menu */}
-       
-            {isOpen &&  <AppMobileMenu  onClose={() => setIsOpen(false)} onOpen={()=> {setIsSettingsOpen(true)}} />}
+
+            {isOpen && <AppMobileMenu onClose={() => setIsOpen(false)} onOpen={() => { setIsSettingsOpen(true) }} />}
 
             {/* Menu Settings */}
-            {isSettingsOpen && <AppSettings onClose={()=> setIsSettingsOpen(false)} onOpen={()=> setIsSettingsOpen(true)} />}
-            
+            {isSettingsOpen && <AppSettings onClose={() => setIsSettingsOpen(false)}  />}
+
 
             <span aria-hidden="true" className="hidden md:block h-12 w-px shrink-0 bg-line" /> {/* Separator */}
 
             {/* Navigation Links */}
 
-            <div className="hidden md:flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer shrink-0 p-3 *:p-1  *:focus:bg-brand/10 *:focus:text-brand *:rounded-full">
+            <div className="hidden  md:flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer shrink-0 p-3 *:p-1  *:focus:bg-brand/10 *:focus:text-brand *:rounded-full">
 
-                <NavLink  to="#home" onClick={() => setIsOpen(false)}>Home</NavLink>
-                <NavLink to="#about" onClick={() => setIsOpen(false)}>Chi sono</NavLink>
-                <NavLink to="#projects" onClick={() => setIsOpen(false)}>Progetti</NavLink>
-                <NavLink to="#contact" onClick={() => setIsOpen(false)}>Contatti</NavLink>
-                
+                <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
+                <a href="#about" onClick={() => setIsOpen(false)}>Chi sono</a>
+                <a href="#projects" onClick={() => setIsOpen(false)}>Progetti</a>
+                <a href="#contact" onClick={() => setIsOpen(false)}>Contatti</a>
+
             </div>
 
             <span aria-hidden="true" className="hidden md:block h-12 w-px shrink-0 bg-line" /> {/* Separator */}
-            
+
             {/* Settings menu */}
 
             <button className="hidden md:flex items-center gap-5 text-md font-medium cursor-pointer shrink-0 p-3" onClick={() => setIsSettingsOpen(true)}>
