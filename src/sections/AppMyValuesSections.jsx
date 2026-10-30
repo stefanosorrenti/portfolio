@@ -9,7 +9,7 @@ export default function AppMyValuesSections() {
                 aria-label="My values section"
             >
                 <h3 className="mb-2 text-xs leading-4 font-medium tracking-[0.24em] text-muted uppercase md:mb-4 lg:mb-6 xl:mb-8">
-                    My values
+                    I miei valori
                 </h3>
 
                 <ul className="grid divide-y divide-line lg:grid-cols-3 lg:divide-x lg:divide-y-0">
@@ -40,10 +40,10 @@ export default function AppMyValuesSections() {
 
                             <div>
                                 <h4 className="text-lg leading-snug font-semibold tracking-tight text-ink md:text-xl xl:text-2xl">
-                                    Creativity
+                                    Creatività
                                 </h4>
                                 <p className="mt-1 text-base leading-normal text-body md:mt-2 md:leading-relaxed xl:text-lg">
-                                    I enjoy turning ideas into simple and effective solutions.
+                                    Mi piace trasformare le idee in soluzioni semplici ed efficaci.
                                 </p>
                             </div>
                         </div>
@@ -74,10 +74,10 @@ export default function AppMyValuesSections() {
 
                             <div>
                                 <h4 className="text-lg leading-snug font-semibold tracking-tight text-ink md:text-xl xl:text-2xl">
-                                    Precision
+                                    Precisione
                                 </h4>
                                 <p className="mt-1 text-base leading-normal text-body md:mt-2 md:leading-relaxed xl:text-lg">
-                                    My background in optics taught me to value accuracy in every detail.
+                                    L’esperienza nell’ottica mi ha insegnato a dare valore a ogni dettaglio.
                                 </p>
                             </div>
 
@@ -109,10 +109,10 @@ export default function AppMyValuesSections() {
 
                             <div>
                                 <h4 className="text-lg leading-snug font-semibold tracking-tight text-ink md:text-xl xl:text-2xl">
-                                    Continuous Learning
+                                    Crescita continua
                                 </h4>
                                 <p className="mt-1 text-base leading-normal text-body md:mt-2 md:leading-relaxed xl:text-lg">
-                                    I’m always exploring new tools, technologies and perspectives to improve.
+                                    Esploro nuovi strumenti, tecnologie e punti di vista per migliorare ogni giorno.
                                 </p>
                             </div>
                             

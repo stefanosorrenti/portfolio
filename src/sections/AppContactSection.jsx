@@ -12,13 +12,13 @@ export default function AppContactSection() {
                 {/* Title */}
                 <div className="lg:flex lg:min-h-40 lg:flex-col lg:justify-center xl:min-h-44">
                     <span className="mb-[9px] block text-[11px] leading-[14px] font-medium tracking-[0.32em] text-muted uppercase md:mb-3 lg:text-xs lg:leading-4 xl:mb-4">
-                        Let&apos;s connect
+                        Contatti
                     </span>
                     <h2
                         id="contact-title"
                         className="text-[34px] leading-[1.03] font-bold tracking-[-0.04em] text-ink sm:text-[38px] md:text-[40px] xl:text-[48px]"
                     >
-                        Let&apos;s build <br /> something <span className="text-brand">great.</span>
+                        Diamo forma alla <br /> tua prossima <span className="text-brand">idea.</span>
                     </h2>
                 </div>
 
@@ -26,10 +26,9 @@ export default function AppContactSection() {
                 {/* Description */}
                 <div className="flex lg:items-center">
                     <p className="max-w-[420px] text-base leading-[1.5] text-body md:max-w-2xl md:leading-relaxed lg:max-w-none xl:text-lg">
-                        I&apos;m open to new opportunities, collaboration
-                         or just a nice conversation about tech, ideas or optics.
+                        Sono aperto a nuove opportunità e collaborazioni, ma anche a una chiacchierata su tecnologia, idee o ottica.
                         <br className="hidden md:block" />
-                        Feel free to reach out!
+                        Hai un progetto in mente? Scrivimi!
                     </p>
                 </div>
 

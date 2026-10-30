@@ -22,10 +22,10 @@ export default function AppFooter() {
                 {/* Motto and copyright */}
                 <div className="flex min-w-0 flex-col items-start gap-5 text-muted md:ml-auto md:flex-row md:flex-wrap md:items-center md:gap-8 lg:ml-0 lg:flex-nowrap">
                     <p className="shrink-0 text-sm leading-5 tracking-[0.05em] whitespace-pre-line lg:text-xs lg:leading-4">
-                        {"Precision today.\nA brighter tomorrow."}
+                        {"Precisione oggi.\nNuove prospettive domani."}
                     </p>
                     <p className="text-sm leading-5 font-normal lg:flex lg:items-center lg:gap-8 lg:text-xs lg:whitespace-nowrap lg:before:block lg:before:h-px lg:before:w-28 lg:before:shrink-0 lg:before:bg-optical lg:before:content-['']">
-                        © {new Date().getFullYear()} Stefano Sorrenti. All rights reserved.
+                        © {new Date().getFullYear()} Stefano Sorrenti. Tutti i diritti riservati.
                     </p>
                 </div>
             </div>
