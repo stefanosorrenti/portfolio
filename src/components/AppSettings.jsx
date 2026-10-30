@@ -5,18 +5,18 @@ import { useState } from 'react';
 export default function AppSettings({ onClose }) {
 
     //DATA
+    
     const htmlElement = document.documentElement;
-    const brandColor = getComputedStyle(htmlElement).getPropertyValue('--color-brand');
-
+    
     
     //USE STATE
-    const [color, setColor] = useState(brandColor);
+    const [color, setColor] = useState(localStorage.getItem('brandColor') || '#1456e9');
     
-
+     
     //FUNCTIONS
     function handleSave() {
-        /* htmlElement.style.setProperty('--color-brand', color); */
-        
+        localStorage.setItem('brandColor', color);
+        htmlElement.style.setProperty('--color-brand', color);
         localStorage.setItem('darkMode', htmlElement.classList.contains('dark') ? 'dark' : 'light')
         onClose()
     }
@@ -27,6 +27,8 @@ export default function AppSettings({ onClose }) {
         } else {
             htmlElement.classList.remove('dark')
         }
+
+        
         onClose()
     }
     return (
