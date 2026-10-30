@@ -1,4 +1,4 @@
-import portraitPlaceholder from "../assets/portrait-placeholder.svg";
+import portraitPlaceholder from "../assets/potrait-pic.png";
 
 export default function AppHeroSection() {
     return (
