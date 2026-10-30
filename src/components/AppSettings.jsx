@@ -5,20 +5,30 @@ import { useState } from 'react';
 export default function AppSettings({ onClose }) {
 
     //DATA
-    const brandColor = getComputedStyle(document.documentElement).getPropertyValue('--color-brand');
+    const htmlElement = document.documentElement;
+    const brandColor = getComputedStyle(htmlElement).getPropertyValue('--color-brand');
 
+    
     //USE STATE
-
     const [color, setColor] = useState(brandColor);
-
+    
 
     //FUNCTIONS
     function handleSave() {
-        document.documentElement.style.setProperty('--color-brand', color);
-
+        /* htmlElement.style.setProperty('--color-brand', color); */
+        
+        localStorage.setItem('darkMode', htmlElement.classList.contains('dark') ? 'dark' : 'light')
         onClose()
     }
-
+    
+    function onCancel () {
+        if(localStorage.getItem('darkMode') === 'dark') {
+            htmlElement.classList.add('dark')
+        } else {
+            htmlElement.classList.remove('dark')
+        }
+        onClose()
+    }
     return (
 
         /* Backdrop */
@@ -73,7 +83,7 @@ export default function AppSettings({ onClose }) {
                         
                         <div className="flex items-center">
                             <label htmlFor="dark-mode"></label>
-                            <input type="checkbox" id="dark-mode" className="size-5 lg:size-6 accent-brand" />
+                            <input type="checkbox" id="dark-mode" className="size-5 lg:size-6 accent-brand" defaultChecked={htmlElement.classList.contains('dark')}  onClick={() =>  htmlElement.classList.toggle('dark')}    />
                         </div>
                     </section>
 
@@ -92,7 +102,7 @@ export default function AppSettings({ onClose }) {
 
                 {/* Buttons */}
                 <div className="mx-4 flex shrink-0 justify-end gap-3 border-t border-line py-4 md:mx-6 lg:mx-8 lg:py-5">
-                    <button type="button" className="inline-flex min-h-10 items-center justify-center rounded-md border border-faint bg-surface px-4 py-2 text-sm font-semibold text-ink" onClick={onClose}>Annulla</button>
+                    <button type="button" className="inline-flex min-h-10 items-center justify-center rounded-md border border-faint bg-surface px-4 py-2 text-sm font-semibold text-ink" onClick={onCancel}>Annulla</button>
                     <button type="button" className="inline-flex min-h-10 items-center justify-center rounded-md border border-brand bg-brand px-4 py-2 text-sm font-semibold text-white" onClick={handleSave}>Salva</button>
                 </div>
             </div>
