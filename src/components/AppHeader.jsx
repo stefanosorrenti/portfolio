@@ -6,7 +6,7 @@ export default function AppHeader() {
 
         /* HEADER */
         
-        <header className="border-b border-line bg-canvas">
+        <header className="border-b border-line">
             
             {/* NavBar */}
             

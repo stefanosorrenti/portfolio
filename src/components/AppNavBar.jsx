@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {useLocation} from 'react-router-dom'
 import AppMobileMenu from "./AppMobileMenu";
 import AppSettings from "./AppSettings";
 
@@ -7,11 +8,11 @@ export default function AppNavBar() {
     //USE STATE
     const [isOpen, setIsOpen] = useState(false)
     const [isSettingsOpen, setIsSettingsOpen] = useState(false)
-
+    const location = useLocation()
     
     return (
 
-        <nav className="container mx-auto min-h-14 flex justify-between md:justify-normal flex-wrap md:flex-nowrap items-center p-4 gap-11" id="home" aria-label="Main Navigation">
+        <nav className="flex fixed w-full bg-canvas mx-auto min-h-14 justify-between md:justify-normal md:z-3 flex-wrap md:flex-nowrap items-center p-4 gap-11" aria-label="Main Navigation">
 
             {/* Developer Name */}
 
@@ -43,7 +44,7 @@ export default function AppNavBar() {
             {isOpen && <AppMobileMenu onClose={() => setIsOpen(false)} onOpen={() => { setIsSettingsOpen(true) }} />}
 
             {/* Menu Settings */}
-            {isSettingsOpen && <AppSettings onClose={() => setIsSettingsOpen(false)}  />}
+            {isSettingsOpen && <AppSettings onSettingClose={() => setIsSettingsOpen(false)} onClose= {()=> setIsOpen(false) }  />}
 
 
             <span aria-hidden="true" className="hidden md:block h-12 w-px shrink-0 bg-line" /> {/* Separator */}
@@ -52,10 +53,10 @@ export default function AppNavBar() {
 
             <div className="hidden  md:flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer shrink-0 p-3 *:p-1  *:focus:bg-brand/10 *:focus:text-brand *:rounded-full">
 
-                <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
-                <a href="#about" onClick={() => setIsOpen(false)}>Chi sono</a>
-                <a href="#projects" onClick={() => setIsOpen(false)}>Progetti</a>
-                <a href="#contact" onClick={() => setIsOpen(false)}>Contatti</a>
+                <a href="#home" className={location.hash === '#home' ? 'bg-brand/10' : ''}  onClick={() => setIsOpen(false)}>Home</a>
+                <a href="#about" className={location.hash === '#about' ? 'bg-brand/10' : ''}  onClick={() => setIsOpen(false)}>Chi sono</a>
+                <a href="#projects"  className={location.hash === '#projects' ? 'bg-brand/10' : ''}  onClick={() => setIsOpen(false)}>Progetti</a>
+                <a href="#contacts" className={location.hash === '#contacts' ? 'bg-brand/10' : ''}  onClick={() => setIsOpen(false)}>Contatti</a>
 
             </div>
 

@@ -1,18 +1,19 @@
-import { NavLink } from "react-router-dom";
+import {useLocation} from 'react-router-dom'
 
 export default function AppMobileMenu({ onClose, onOpen }) {
+  const location = useLocation()
 
     return (
 
         
-        <div className="basis-full md:hidden flex flex-col items-start gap-2.5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer  p-3 *:p-1  *:focus:bg-brand/10 *:focus:text-brand *:rounded-full" id="mobile-menu" aria-label="Mobile Navigation">
+        <div className="basis-full md:hidden flex flex-col items-start gap-2.5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer  p-3 *:p-1 *:rounded-full " id="mobile-menu" aria-label="Mobile Navigation">
 
             {/* Navigation Links */}
             
-            <a href="#home" onClick={onClose}>Home</a>
-            <a href="#about" onClick={onClose}>Chi sono</a>
-            <a href="#projects" onClick={onClose}>Progetti</a>
-            <a href="#contact" onClick={onClose}>Contatti</a>
+            <a href="#home" className={location.hash === '#home' ? 'bg-brand/10' : ''} onClick={onClose}>Home</a>
+            <a href="#about" className={location.hash === '#about' ? 'bg-brand/10' : ''} onClick={onClose}>Chi sono</a>
+            <a href="#projects" className={location.hash === '#projects' ? 'bg-brand/10' : ''} onClick={onClose}>Progetti</a>
+            <a href="#contacts" className={location.hash === '#contacts' ? 'bg-brand/10' : ''} onClick={onClose}>Contatti</a>
 
             <button onClick={onOpen}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

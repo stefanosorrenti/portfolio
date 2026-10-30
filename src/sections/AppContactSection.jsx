@@ -4,7 +4,7 @@ export default function AppContactSection() {
         /* Contact Section */
         <div className="-mb-px border-b border-line md:py-2 lg:py-5 xl:py-7">
             <section
-                id="contact"
+                id="contacts"
                 aria-labelledby="contact-title"
                 className="container mx-auto grid gap-8 bg-canvas px-[27px] py-9 lg:min-h-[125px] lg:grid-cols-3 lg:gap-[27px] lg:pt-[10px] lg:pb-[28px]"
             >

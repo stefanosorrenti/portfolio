@@ -2,7 +2,7 @@
 import { HexColorPicker, HexColorInput } from 'react-colorful';
 import { useState, useEffect } from 'react';
 
-export default function AppSettings({ onClose }) {
+export default function AppSettings({ onSettingClose, onClose}) {
 
     //DATA
 
@@ -18,6 +18,7 @@ export default function AppSettings({ onClose }) {
         localStorage.setItem('brandColor', color);
         htmlElement.style.setProperty('--color-brand', color);
         localStorage.setItem('darkMode', htmlElement.classList.contains('dark') ? 'dark' : 'light')
+        onSettingClose()
         onClose()
     }
 
@@ -29,14 +30,15 @@ export default function AppSettings({ onClose }) {
         }
 
 
+        onSettingClose()
         onClose()
     }
 
     //USE EFFECT
     useEffect(() => {
 
-        console.log(onClose)
-        if (!onClose) return
+        console.log(onSettingClose)
+        if (!onSettingClose) return
 
         const original = document.body.style.overflow
         document.body.style.overflow = 'hidden'
@@ -46,7 +48,7 @@ export default function AppSettings({ onClose }) {
             document.body.style.overflow = original
         }
 
-    }, [onClose])
+    }, [onSettingClose])
     return (
 
         /* Backdrop */
