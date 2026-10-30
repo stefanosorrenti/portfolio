@@ -36,8 +36,9 @@ export default function AppContactSection() {
                 {/* Links */}
                 <div className="flex flex-wrap items-center gap-3 md:gap-4 lg:min-h-28 lg:justify-center lg:border-l lg:border-line xl:min-h-32 xl:gap-5">
                     <a
-                        href=""
+                        href="https://github.com/stefanosorrenti"
                         aria-label="GitHub"
+                        target="_blank"
                         className="inline-flex size-12 shrink-0 items-center justify-center rounded-full border border-muted/25 text-ink transition-colors duration-150 hover:border-brand hover:text-brand md:size-14 xl:size-16"
                     >
                         <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5 fill-current md:size-6 xl:size-7">
@@ -46,8 +47,9 @@ export default function AppContactSection() {
                     </a>
 
                     <a
-                        href=""
+                        href="https://www.linkedin.com/in/stefano-sorrenti-7797b7413/"
                         aria-label="LinkedIn"
+                        target="_blank"
                         className="inline-flex size-12 shrink-0 items-center justify-center rounded-full border border-muted/25 text-ink transition-colors duration-150 hover:border-brand hover:text-brand md:size-14 xl:size-16"
                     >
                         <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5 fill-current md:size-6 xl:size-7">
@@ -56,8 +58,9 @@ export default function AppContactSection() {
                     </a>
 
                     <a
-                        href=""
+                        href="mailto:stefanosorrenti01@gmail.com"
                         aria-label="Email"
+                        
                         className="inline-flex size-12 shrink-0 items-center justify-center rounded-full border border-muted/25 text-ink transition-colors duration-150 hover:border-brand hover:text-brand md:size-14 xl:size-16"
                     >
                         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className="size-5 stroke-current md:size-6 xl:size-7" strokeWidth="1.8">

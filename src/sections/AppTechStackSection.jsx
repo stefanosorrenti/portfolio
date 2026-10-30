@@ -14,7 +14,7 @@ export default function AppTechStackSection() {
 
                 {/* Tech stacks list */}
 
-                <ul className="grid grid-cols-3 gap-x-4 gap-y-6 sm:grid-cols-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-11 lg:gap-x-2 xl:gap-x-4">
+                <ul className="grid grid-cols-3 gap-x-4 gap-y-6 sm:grid-cols-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-auto lg:gap-x-2 xl:gap-x-4">
 
                     {technologies.map((tech) => (
                         <li key={tech.id}>

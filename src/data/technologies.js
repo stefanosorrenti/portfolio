@@ -56,12 +56,18 @@ const technologies = [
 
     {
         id: 10,
+        name: 'Laravel',
+        icon: 'laravel'
+    },
+
+    {
+        id: 11,
         name: "MySQL",
         icon: "mysql" 
     },
 
     {
-        id: 11,
+        id: 12,
         name: "Git",
         icon: "git" 
     }

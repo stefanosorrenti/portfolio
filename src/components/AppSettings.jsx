@@ -37,7 +37,6 @@ export default function AppSettings({ onSettingClose, onClose}) {
     //USE EFFECT
     useEffect(() => {
 
-        console.log(onSettingClose)
         if (!onSettingClose) return
 
         const original = document.body.style.overflow

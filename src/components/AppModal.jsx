@@ -1,4 +1,24 @@
+import { useEffect } from 'react';
 export default function AppModal({ onClose }) {
+
+
+
+
+    //USE EFFECT
+    useEffect(() => {
+    
+            if (!onClose) return
+    
+            const original = document.body.style.overflow
+            document.body.style.overflow = 'hidden'
+    
+    
+            return () => {
+                document.body.style.overflow = original
+            }
+    
+        }, [onClose])
+        
     return (
         /* Modal backdrop */
         <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/75 md:items-center md:p-6 lg:p-10">
