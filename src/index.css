@@ -46,6 +46,9 @@
 
   html {
     color-scheme: light;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+    
   }
 
   body {

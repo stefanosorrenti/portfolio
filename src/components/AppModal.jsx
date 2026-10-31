@@ -6,19 +6,22 @@ export default function AppModal({ onClose }) {
 
     //USE EFFECT
     useEffect(() => {
-    
-            if (!onClose) return
-    
-            const original = document.body.style.overflow
-            document.body.style.overflow = 'hidden'
-    
-    
-            return () => {
-                document.body.style.overflow = original
-            }
-    
-        }, [onClose])
-        
+
+        if (!onClose) return
+
+        const originalOverflow = document.body.style.overflow
+
+        document.body.style.overflow = 'hidden'
+        document.documentElement.classList.add('bg-black/75')
+
+
+        return () => {
+            document.body.style.overflow = originalOverflow
+            document.documentElement.classList.remove('bg-black/75')
+        }
+
+    }, [onClose])
+
     return (
         /* Modal backdrop */
         <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/75 md:items-center md:p-6 lg:p-10">
@@ -29,7 +32,7 @@ export default function AppModal({ onClose }) {
                 aria-labelledby="project-modal-title"
                 className="relative flex max-h-[95dvh] w-full max-w-md flex-col overflow-hidden rounded-t-2xl border border-line bg-surface shadow-2xl md:max-w-3xl md:rounded-2xl lg:max-w-6xl"
             >
-                
+
                 {/* Close button */}
                 <button
                     type="button"

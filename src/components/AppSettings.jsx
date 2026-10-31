@@ -2,7 +2,7 @@
 import { HexColorPicker, HexColorInput } from 'react-colorful';
 import { useState, useEffect } from 'react';
 
-export default function AppSettings({ onSettingClose, onClose}) {
+export default function AppSettings({ onSettingClose, onClose }) {
 
     //DATA
 
@@ -41,10 +41,11 @@ export default function AppSettings({ onSettingClose, onClose}) {
 
         const original = document.body.style.overflow
         document.body.style.overflow = 'hidden'
-
+        document.documentElement.classList.add('bg-black/75')
 
         return () => {
             document.body.style.overflow = original
+            document.documentElement.classList.remove('bg-black/75')
         }
 
     }, [onSettingClose])
