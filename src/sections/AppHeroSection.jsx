@@ -13,8 +13,8 @@ export default function AppHeroSection() {
                         UN NUOVO PERCORSO. LA STESSA VISIONE.
                     </span>
                     <h1 className="text-[44px] leading-[0.98] font-extrabold tracking-[-0.03em] text-ink sm:text-[56px] md:text-[60px] lg:text-[80px] xl:text-[96px]">
-                        From optics<br />
-                        to <span className="text-brand">code.</span>
+                        Dall'ottica<br />
+                        al <span className="text-brand">codice.</span>
                     </h1>
                     <p className="mt-6 mb-6 max-w-sm text-sm leading-relaxed text-body sm:max-w-md md:mb-7 md:max-w-full lg:mt-8 lg:mb-8 lg:max-w-[420px] lg:text-base xl:max-w-[460px] xl:text-lg">
                        Sono Stefano Sorrenti, sviluppatore web full stack junior. Porto nello sviluppo la mia creatività, l’attenzione ai dettagli e la voglia di imparare ogni giorno.
@@ -23,10 +23,10 @@ export default function AppHeroSection() {
                     {/* CTA buttons */}
 
                     <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6">
-                        <a href="#projects" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] bg-brand px-4 py-2 text-sm font-medium text-white sm:px-6 lg:min-h-12 lg:px-8">
+                        <a href="#projects" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] bg-brand px-4 py-2 text-sm font-medium text-white sm:px-6 lg:min-h-12 lg:px-8 hover:bg-brand/70">
                             Scopri i progetti <span aria-hidden="true">&rarr;</span>
                         </a>
-                        <a href="sorrenti-stefano-cv.pdf" target="_blank" className="inline-flex min-h-11 items-center justify-center rounded-[3px] border border-faint px-4 py-2 text-sm font-medium text-ink sm:px-6 lg:min-h-12 lg:px-8">
+                        <a href="sorrenti-stefano-cv.pdf" target="_blank" className="inline-flex min-h-11 items-center justify-center rounded-[3px] border border-faint px-4 py-2 text-sm font-medium text-ink sm:px-6 lg:min-h-12 lg:px-8 hover:bg-faint/10">
                             Vedi CV
                         </a>
                     </div>
@@ -41,8 +41,8 @@ export default function AppHeroSection() {
                     <div className="w-full min-w-0c xl:ml-[-30%]">
                         <img className="h-auto w-full max-w-full lg:max-w-none xl:w-[110%]" src={portraitPlaceholder} alt="Portrait" />
                     </div>
-                    <p className="absolute top-1/2 right-0 w-18 -translate-y-1/2 text-start text-[9px] leading-[1.6] font-semibold tracking-[0.1em] text-muted uppercase before:mx-auto before:mb-3 before:block before:h-0.5 before:w-5 before:bg-brand lg:w-24 lg:text-[10px] lg:tracking-[0.15em] lg:before:w-7">
-                        Curiosity.<br />New<br />Perspective.
+                    <p className="absolute top-1/2 right-0 w-18 -translate-y-1/2 text-start text-[9px] leading-[1.6] font-semibold tracking-[0.1em] text-muted uppercase before:mr-auto before:mb-3 before:block before:h-0.5 before:w-8 before:bg-brand lg:w-24 lg:text-[10px] lg:tracking-[0.15em] lg:before:w-7">
+                        Curiosità.<br />Inventivà<br />Prospettiva.
                     </p>    
                 </div>
             </div>
