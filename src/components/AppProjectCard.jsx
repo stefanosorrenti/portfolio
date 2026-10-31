@@ -3,16 +3,18 @@
 import AppModal from "./AppModal";
 import { useState } from "react";
 
-export default function AppProjectCard() {
+
+export default function AppProjectCard({ project }) {
 
     // State for modal
     const [isModalOpen, setIsModalOpen] = useState(false);
-
+    
+    
     return (
 
         <>
             {/* Modal */}
-            {isModalOpen && <AppModal onClose={() => setIsModalOpen(false)} />}
+            {isModalOpen && <AppModal onClose={() => setIsModalOpen(false)} project={project} />}
 
 
             {/* Project card */}
@@ -20,12 +22,12 @@ export default function AppProjectCard() {
             <div className="flex flex-col rounded border border-line bg-surface p-2 font-sans md:p-3">
                 {/* Image */}
                 <div className="aspect-video w-full shrink-0 overflow-hidden rounded-sm">
-                    <img className="h-full w-full object-cover" src="https://linda-hoang.com/wp-content/uploads/2014/10/img-placeholder-dark.jpg" alt="placeholder" />
+                    <img className="h-full w-full object-cover" src={project.images[0]} alt="placeholder" />
                 </div>
 
                 {/* Title and buttons */}
                 <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-1 px-2 pt-3 pb-2 md:pt-4">
-                    <h2 className="flex-1 text-lg leading-snug font-bold tracking-tight text-ink md:text-xl">TITOLO</h2>
+                    <h2 className="flex-1 text-lg leading-snug font-bold tracking-tight text-ink md:text-xl">{project.title}</h2>
                     <div>
                         <button onClick={() => setIsModalOpen(true)}  aria-label="View project" className="inline-flex size-9 cursor-pointer items-center justify-center text-brand md:size-10">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 md:size-6" aria-hidden="true">
@@ -38,15 +40,19 @@ export default function AppProjectCard() {
 
 
                 {/* Description */}
-                <p className="px-2 text-sm leading-normal wrap-break-word text-body md:text-base md:leading-relaxed">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At non saepe, tempore autem, sunt ab voluptas odit ratione cum qui accusamus quod.
+                <p className="px-2 text-sm leading-normal wrap-break-word text-body md:text-base md:leading-relaxed">
+                    {project.description.length > 120 ? project.description.substring(0, 120) + "…" : project.description}
                 </p>
 
 
                 {/* Technologies */}
                 <div className="mt-auto flex flex-wrap gap-2 px-2 pt-4 pb-2 md:pt-5">
-                    <span className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">React</span>
-                    <span className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">JavaScript</span>
-                    <span className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">CSS</span>
+                    {project.technologies.map((technology, i) => (
+
+                    <span key={i} className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">{technology}</span>
+                    ))}
+                    {/* <span className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">JavaScript</span>
+                    <span className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">CSS</span> */}
                 </div>
             </div>
         </>

@@ -1,4 +1,5 @@
 import AppProjectCard from "../components/AppProjectCard";
+import projects from "../data/projects";
 
 export default function AppProjectsSection() {
     return (
@@ -18,10 +19,9 @@ export default function AppProjectsSection() {
                 {/* Projects */}
 
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
-                    <AppProjectCard />
-                    <AppProjectCard />
-                    <AppProjectCard />
-                    <AppProjectCard />
+                    {projects.map((project) => (
+                        <AppProjectCard key={project.id} project={project} />
+                    ))}
                 </div>
 
             </section>
