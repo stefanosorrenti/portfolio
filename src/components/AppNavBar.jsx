@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useLocation } from 'react-router-dom'
 import AppMobileMenu from "./AppMobileMenu";
 import AppSettings from "./AppSettings";
 import { Link } from "react-scroll"
@@ -9,7 +8,7 @@ export default function AppNavBar() {
     //USE STATE
     const [isOpen, setIsOpen] = useState(false)
     const [isSettingsOpen, setIsSettingsOpen] = useState(false)
-    const location = useLocation()
+    
 
     return (
         <>
