@@ -47,10 +47,10 @@ export default function AppNavBar() {
 
                 <div className="hidden  md:flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer shrink-0 p-3 *:p-1  *:rounded-full">
 
-                    <Link to="home" smooth={true} spy hashSpy={true} duration={450} offset={-80}  activeClass="bg-brand/10 text-brand focus:bg-brand/10"  onClick={() => setIsOpen(false)}>Home</Link>
-                    <Link to="about"  smooth={true} spy hashSpy={true} duration={450} offset={-80} activeClass="bg-brand/10 text-brand"  onClick={() => setIsOpen(false)}>Chi sono</Link>
-                    <Link to="projects" smooth={true} spy hashSpy={true} duration={450} offset={-80} activeClass="bg-brand/10 text-brand"   onClick={() => setIsOpen(false)}>Progetti</Link>
-                    <Link to="contacts" smooth={true} spy hashSpy={true} duration={450} offset={-80} activeClass="bg-brand/10 text-brand"   onClick={() => setIsOpen(false)}>Contatti</Link>
+                    <Link to="home" smooth={true} spy hashSpy={true} duration={450} offset={-55}  activeClass="bg-brand/10 text-brand focus:bg-brand/10"  onClick={() => setIsOpen(false)}>Home</Link>
+                    <Link to="about"  smooth={true} spy hashSpy={true} duration={450} offset={-55}  activeClass="bg-brand/10 text-brand"  onClick={() => setIsOpen(false)}>Chi sono</Link>
+                    <Link to="projects" smooth={true} spy hashSpy={true} duration={450} offset={-55}  activeClass="bg-brand/10 text-brand"   onClick={() => setIsOpen(false)}>Progetti</Link>
+                    <Link to="contacts" smooth={true} spy hashSpy={true} duration={450} offset={-55}  activeClass="bg-brand/10 text-brand"   onClick={() => setIsOpen(false)}>Contatti</Link>
 
                 </div>
 

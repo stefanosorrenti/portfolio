@@ -10,10 +10,10 @@ export default function AppMobileMenu({ isOpen, onClose, onOpen }) {
 
             {/* Navigation Links */}
 
-            <Link to="home" smooth={true} spy duration={450} offset={-70} activeClass="bg-brand/10 text-brand" onClick={onClose}>Home</Link>
-            <Link to="about" smooth={true} spy duration={450} offset={-70} activeClass="bg-brand/10 text-brand" onClick={onClose}>Chi sono</Link>
-            <Link to="projects" smooth={true} spy duration={450} offset={-70} activeClass="bg-brand/10 text-brand" onClick={onClose}>Progetti</Link>
-            <Link to="contacts" smooth={true} spy duration={450} isDynamic={true    } offset={-70} activeClass="bg-brand/10 text-brand" onClick={onClose}>Contatti</Link>
+            <Link to="home" smooth={true} spy duration={450} offset={-55} activeClass="bg-brand/10 text-brand" onClick={onClose}>Home</Link>
+            <Link to="about" smooth={true} spy duration={450} offset={-55} activeClass="bg-brand/10 text-brand" onClick={onClose}>Chi sono</Link>
+            <Link to="projects" smooth={true} spy duration={450} offset={-55} activeClass="bg-brand/10 text-brand" onClick={onClose}>Progetti</Link>
+            <Link to="contacts" smooth={true} spy duration={450} offset={-55} activeClass="bg-brand/10 text-brand" onClick={onClose}>Contatti</Link>
 
             <button onClick={onOpen}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

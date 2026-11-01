@@ -6,7 +6,7 @@ export default function AppContactSection() {
             <section
                 id="contacts"
                 aria-labelledby="contact-title"
-                className="container mx-auto flex min-h-[84svh] flex-col justify-center gap-6 bg-canvas px-[27px] py-8 sm:gap-7 sm:py-9 md: md:gap-8 md:py-10 lg:grid lg:grid-cols-3 lg:content-center lg:gap-[27px] lg:py-12 xl:gap-8 xl:py-14 2xl:gap-10 2xl:py-16"
+                className="container mx-auto flex min-h-[90svh] flex-col justify-center gap-6 bg-canvas px-[27px] py-8 sm:gap-7 sm:py-9 md: md:gap-8 md:py-10 lg:grid lg:grid-cols-3 lg:content-center lg:gap-[27px] lg:py-12 xl:gap-8 xl:py-14 2xl:gap-10 2xl:py-16"
             >
 
                 {/* Title */}
