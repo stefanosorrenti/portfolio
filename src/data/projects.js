@@ -42,7 +42,7 @@ const porjects = [
         title: "BOOLCOMICS",
         subtitle: "E-commerce Web Application per la vendità di fumetti",
         year: "2026",
-        features: ["Filtri per genere", "Gestione carrello", "Pagina di checkout"],
+        features: ["Cupon sconto", "Gestione carrello", "Pagina di checkout"],
         completed: true,
         description: "E-commerce realizzato in team per la vendita di manga. Back-end sviluppato in Node.js ed Express, con query SQL per la gestione e l’interazione con il database MySQL. Frontend realizzato in React, con Bootstrap per lo stile e l’impaginazione dell’interfaccia.",
         images: boolcomicsImages,

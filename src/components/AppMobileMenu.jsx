@@ -6,7 +6,7 @@ export default function AppMobileMenu({ onClose, onOpen }) {
     return (
 
         
-        <div className="basis-full md:hidden flex flex-col items-start gap-2.5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer [&>button]:focus:bg-brand/10 [&>button]:focus:text-brand  p-3 *:p-1 *:rounded-full" id="mobile-menu" aria-label="Mobile Navigation">
+        <div className="fixed inset-x-0 top-[4rem] z-40 bg-canvas border-b border-line md:hidden flex flex-col items-start gap-2.5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer [&>button]:focus:bg-brand/10 [&>button]:focus:text-brand  p-3 *:p-1 *:rounded-full" id="mobile-menu" aria-label="Mobile Navigation">
 
             {/* Navigation Links */}
             
