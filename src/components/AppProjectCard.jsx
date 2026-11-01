@@ -6,10 +6,11 @@ import { useState } from "react";
 
 export default function AppProjectCard({ project }) {
 
-    // State for modal
+
+    // STATE FOR MODAL
     const [isModalOpen, setIsModalOpen] = useState(false);
-    
-    
+
+
     return (
 
         <>
@@ -26,35 +27,41 @@ export default function AppProjectCard({ project }) {
                 </div>
 
                 {/* Title and buttons */}
-                <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-1 px-2 pt-3 pb-2 md:pt-4">
-                    <h2 className="flex-1 text-lg leading-snug font-bold tracking-tight text-ink md:text-xl">{project.title}</h2>
-                    <div>
-                        <button onClick={() => setIsModalOpen(true)}  aria-label="View project" className="inline-flex size-9 cursor-pointer items-center justify-center text-brand md:size-10">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5 md:size-6" aria-hidden="true">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                            </svg>
-
-                        </button>
-                    </div>
+                <div className="px-2 py-3">
+                    <h2 className="text-lg leading-snug font-bold tracking-tight text-ink md:text-xl">{project.title}</h2>
                 </div>
 
 
                 {/* Description */}
-                <p className="px-2 text-sm leading-normal wrap-break-word text-body md:text-base md:leading-relaxed">
-                    {project.description.length > 120 ? project.description.substring(0, 120) + "…" : project.description}
-                </p>
+
+                {project.description.length > 120 ?
+
+                    (
+                        <p className="px-2 text-sm leading-normal wrap-break-word text-body md:text-base md:leading-relaxed">
+                            {project.description.substring(0, 120)} <button className="text-brand cursor-pointer italic" onClick={() => setIsModalOpen(true)}>...scopri di più</button>
+                        </p>
+
+                    )
+                    :
+                    (
+                        <p className="px-2 text-sm leading-normal wrap-break-word text-body md:text-base md:leading-relaxed">
+                            {project.description}
+                        </p>
+            )
+
+                }
 
 
-                {/* Technologies */}
-                <div className="mt-auto flex flex-wrap gap-2 px-2 pt-4 pb-2 md:pt-5">
-                    {project.technologies.map((technology, i) => (
+            {/* Technologies */}
+            <div className="mt-auto flex flex-wrap gap-2 px-2 pt-4 pb-2 md:pt-5">
+                {project.technologies.map((technology, i) => (
 
                     <span key={i} className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">{technology}</span>
-                    ))}
-                    {/* <span className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">JavaScript</span>
+                ))}
+                {/* <span className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">JavaScript</span>
                     <span className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">CSS</span> */}
-                </div>
             </div>
+        </div >
         </>
     )
 }
