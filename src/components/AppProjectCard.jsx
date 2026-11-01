@@ -1,6 +1,6 @@
 //IMPORTS
 
-import AppModal from "./AppModal";
+import AppCardDetail from "./AppCardDetail";
 import { useState } from "react";
 
 
@@ -15,7 +15,7 @@ export default function AppProjectCard({ project }) {
 
         <>
             {/* Modal */}
-            {isModalOpen && <AppModal onClose={() => setIsModalOpen(false)} project={project} />}
+            {isModalOpen && <AppCardDetail onClose={() => setIsModalOpen(false)} project={project} />}
 
 
             {/* Project card */}
@@ -26,7 +26,7 @@ export default function AppProjectCard({ project }) {
                     <img className="h-full w-full object-cover" src={project.images[0]} alt="placeholder" />
                 </div>
 
-                {/* Title and buttons */}
+                {/* Title */}
                 <div className="px-2 py-3">
                     <h2 className="text-lg leading-snug font-bold tracking-tight text-ink md:text-xl">{project.title}</h2>
                 </div>
@@ -55,11 +55,8 @@ export default function AppProjectCard({ project }) {
             {/* Technologies */}
             <div className="mt-auto flex flex-wrap gap-2 px-2 pt-4 pb-2 md:pt-5">
                 {project.technologies.map((technology, i) => (
-
                     <span key={i} className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">{technology}</span>
                 ))}
-                {/* <span className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">JavaScript</span>
-                    <span className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">CSS</span> */}
             </div>
         </div >
         </>

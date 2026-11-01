@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-export default function AppModal({ onClose, project }) {
+import AppImgModal from './AppImgModal';
+export default function AppCardDetail({ onClose, project }) {
 
 
     //USE STATE
     const [currentIndex, setCurrentIndex] = useState(0)
-
+    const [imgModalOpen, setImgModalOpen] = useState(false)
     //USE EFFECT
     useEffect(() => {
 
@@ -80,13 +81,19 @@ export default function AppModal({ onClose, project }) {
                             </div>
 
                             {/* Image */}
-                            <div className=" mt-5 mb-8 md:mb-24">
-                                <figure className="aspect-5/3 overflow-hidden rounded-lg border border-line bg-soft">
+                            <div className="mt-5 mb-8 md:mb-24">
+                                <figure className="relative aspect-5/3 overflow-hidden rounded-lg border border-line bg-soft">
                                     <img
                                         className="h-full w-full object-cover"
                                         src={project.images[currentIndex]}
                                         alt="placeholder"
                                     />
+                                    {/* Bottone lente ingrandimento in basso a destra dell'immagine */}
+                                    <button type="button" onClick={() => setImgModalOpen(true)} className="inline-flex items-center absolute bottom-1 right-1 cursor-pointer justify-center rounded-full border size-10 border-line bg-surface/70 text-ink shadow-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.75} stroke="currentColor" className="size-5" aria-hidden="true">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                        </svg>
+                                    </button>
                                 </figure>
                                 {/* Buttons and image carousel dots */}
                                 <div className="flex items-center justify-center gap-4 p-3">
@@ -111,9 +118,10 @@ export default function AppModal({ onClose, project }) {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m0 0-7-7m7 7-7 7" />
                                         </svg>
                                     </button>
-
+                                    
                                 </div>
-
+                                {/* Image modal */} 
+                                {imgModalOpen && <AppImgModal project={project} currentIndex={currentIndex} onClose={() => setImgModalOpen(false)} nextImg={nextImg} prevImg={prevImg} />}
                             </div>
                         </div>
 
@@ -166,12 +174,12 @@ export default function AppModal({ onClose, project }) {
                                     </svg>
                                     Vedi progetto
                                 </a>
-                                <button type="button" className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md border border-faint bg-surface px-4 py-3 text-sm font-semibold text-ink">
+                                <a href={project.repoUrlFrontend} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 w-full cursor-pointer items-center justify-center gap-3 rounded-md border border-faint bg-surface px-4 py-3 text-sm font-semibold text-ink">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="size-5" aria-hidden="true">
                                         <path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.02 1.75 2.68 1.24 3.33.95.1-.73.4-1.23.71-1.51-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.8 10.8 0 0 1 5.62 0c2.15-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.69.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z" />
                                     </svg>
                                     Vedi il codice
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
