@@ -5,7 +5,7 @@ export default function AppFooter() {
 
         <footer className="border-t border-line bg-canvas font-sans text-ink">
 
-            <div className="container mx-auto flex flex-col items-start gap-8 px-4 py-5 md:flex-row md:flex-wrap md:items-center lg:flex-nowrap lg:justify-between">
+            <div className="container mx-auto flex flex-col items-start gap-8 px-4 min-h-[4rem] md:flex-row md:flex-wrap md:items-center lg:flex-nowrap lg:justify-between">
 
                 {/* Developer Name */}
                 <div className="flex shrink-0 items-center gap-5 lg:grow">

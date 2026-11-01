@@ -2,21 +2,21 @@ export default function AppContactSection() {
     return (
 
         /* Contact Section */
-        <div className="-mb-px border-b border-line md:py-2 lg:py-5 xl:py-7">
+        <div className="-mb-px border-b border-line">
             <section
                 id="contacts"
                 aria-labelledby="contact-title"
-                className="container mx-auto grid gap-8 bg-canvas px-[27px] py-9 lg:min-h-[125px] lg:grid-cols-3 lg:gap-[27px] lg:pt-[10px] lg:pb-[28px]"
+                className="container mx-auto flex min-h-[84svh] flex-col justify-center gap-6 bg-canvas px-[27px] py-8 sm:gap-7 sm:py-9 md: md:gap-8 md:py-10 lg:grid lg:grid-cols-3 lg:content-center lg:gap-[27px] lg:py-12 xl:gap-8 xl:py-14 2xl:gap-10 2xl:py-16"
             >
 
                 {/* Title */}
-                <div className="lg:flex lg:min-h-40 lg:flex-col lg:justify-center xl:min-h-44">
+                <div className="lg:flex lg:flex-col lg:justify-center">
                     <span className="mb-[9px] block text-[11px] leading-[14px] font-medium tracking-[0.32em] text-muted uppercase md:mb-3 lg:text-xs lg:leading-4 xl:mb-4">
                         Contatti
                     </span>
                     <h2
                         id="contact-title"
-                        className="text-[34px] leading-[1.03] font-bold tracking-[-0.04em] text-ink sm:text-[38px] md:text-[40px] xl:text-[48px]"
+                        className="text-[36px] leading-[1.03] font-bold tracking-[-0.04em] text-ink sm:text-[38px] md:text-[40px] lg:text-[42px] xl:text-[48px] 2xl:text-[52px]"
                     >
                         Diamo forma alla <br /> tua prossima <span className="text-brand">idea.</span>
                     </h2>
@@ -25,7 +25,7 @@ export default function AppContactSection() {
 
                 {/* Description */}
                 <div className="flex lg:items-center">
-                    <p className="max-w-[420px] text-base leading-[1.5] text-body md:max-w-2xl md:leading-relaxed lg:max-w-none xl:text-lg">
+                    <p className="max-w-[420px] text-base leading-[1.5] text-body sm:max-w-md md:max-w-lg md:text-lg md:leading-relaxed lg:max-w-xl xl:max-w-2xl xl:text-xl 2xl:max-w-3xl">
                         Sono aperto a nuove opportunità e collaborazioni, ma anche a una chiacchierata su tecnologia, idee o ottica.
                         <br className="hidden md:block" />
                         Hai un progetto in mente? Scrivimi!
@@ -34,7 +34,7 @@ export default function AppContactSection() {
 
 
                 {/* Links */}
-                <div className="flex flex-wrap items-center gap-3 md:gap-4 lg:min-h-28 lg:justify-center lg:border-l lg:border-line xl:min-h-32 xl:gap-5">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-3.5 md:gap-4 lg:justify-center lg:gap-5 lg:border-l lg:border-line xl:gap-6 2xl:gap-7">
                     <a
                         href="https://github.com/stefanosorrenti"
                         aria-label="GitHub"
