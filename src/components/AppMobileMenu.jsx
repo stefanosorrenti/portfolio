@@ -1,19 +1,20 @@
-import {useLocation} from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { Link } from 'react-scroll'
 
-export default function AppMobileMenu({ onClose, onOpen }) {
-  const location = useLocation()
-
+export default function AppMobileMenu({ isOpen, onClose, onOpen }) {
+    const location = useLocation()
+    
     return (
 
-        
-        <div className="fixed inset-x-0 top-[4rem] z-40 bg-canvas border-b border-line md:hidden flex flex-col items-start gap-2.5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer [&>button]:focus:bg-brand/10 [&>button]:focus:text-brand  p-3 *:p-1 *:rounded-full" id="mobile-menu" aria-label="Mobile Navigation">
+
+        <div className={`fixed inset-x-0 top-[4rem] z-40 bg-canvas border-b border-line md:hidden ${isOpen ? 'flex' : 'hidden'} flex-col items-start gap-2.5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer p-3 *:p-1 *:rounded-full`} id="mobile-menu" aria-label="Mobile Navigation">
 
             {/* Navigation Links */}
-            
-            <a href="#home" className={location.hash === '#home' ? 'bg-brand/10' : ''} onClick={onClose}>Home</a>
-            <a href="#about" className={location.hash === '#about' ? 'bg-brand/10' : ''} onClick={onClose}>Chi sono</a>
-            <a href="#projects" className={location.hash === '#projects' ? 'bg-brand/10' : ''} onClick={onClose}>Progetti</a>
-            <a href="#contacts" className={location.hash === '#contacts' ? 'bg-brand/10' : ''} onClick={onClose}>Contatti</a>
+
+            <Link to="home" smooth={true} spy duration={450} offset={-70} activeClass="bg-brand/10 text-brand" onClick={onClose}>Home</Link>
+            <Link to="about" smooth={true} spy duration={450} offset={-70} activeClass="bg-brand/10 text-brand" onClick={onClose}>Chi sono</Link>
+            <Link to="projects" smooth={true} spy duration={450} offset={-70} activeClass="bg-brand/10 text-brand" onClick={onClose}>Progetti</Link>
+            <Link to="contacts" smooth={true} spy duration={450} offset={-70} activeClass="bg-brand/10 text-brand" onClick={onClose}>Contatti</Link>
 
             <button onClick={onOpen}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

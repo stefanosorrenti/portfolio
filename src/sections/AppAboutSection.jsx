@@ -6,7 +6,7 @@ export default function AppAboutSection() {
 
         /* About section */
 
-        <section id="about" className="bg-soft " aria-label="About-section">
+        <section className="bg-soft " aria-label="About-section">
 
             <div className="border-y border-line md:py-2 lg:py-5 xl:py-7">
 

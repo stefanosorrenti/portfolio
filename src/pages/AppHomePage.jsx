@@ -12,8 +12,10 @@ export function AppHomePage() {
     return (
         <>
             <AppHeroSection />
-            <AppAboutSection />
-            <AppMyValuesSections />
+            <div id="about">
+                <AppAboutSection />
+                <AppMyValuesSections />
+            </div>
             <AppProjectsSection />
             <AppTechStackSection />
             <AppContactSection />

@@ -48,7 +48,7 @@
     color-scheme: light;
     scrollbar-width: thin;
     scrollbar-gutter: stable;
-    scroll-padding-top: 5rem;
+    
   }
 
   body {
@@ -68,16 +68,7 @@
     color: white;
   }
 
-  section[id] {
-    scroll-margin-top: 1rem;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-
-  /* ANIMATION PREFERENCES (smooth scrolling) */
   
-  html {
-    scroll-behavior: smooth;
-  }
 }
+
+
