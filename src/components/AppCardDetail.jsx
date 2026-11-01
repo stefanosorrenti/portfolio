@@ -46,7 +46,7 @@ export default function AppCardDetail({ onClose, project }) {
 
     return (
         /* Modal backdrop */
-        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/75 md:items-center md:p-4 lg:p-6">
+        <div className="fixed inset-0 z-60 flex items-end justify-center bg-black/75 md:items-center md:p-4 lg:p-6">
             {/* Modal content */}
             <div
                 role="dialog"

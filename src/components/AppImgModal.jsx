@@ -3,7 +3,7 @@ export default function AppImgModal({ project, currentIndex, onClose, nextImg, p
 
         /* Backdrop */
         
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+        <div className="fixed inset-0 z-70 flex items-center justify-center bg-black/70">
 
             <div className="relative max-h-[90vh] max-w-[90vw] overflow-auto rounded-lg border border-line bg-surface p-4">
 
