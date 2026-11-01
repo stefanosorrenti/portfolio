@@ -12,7 +12,7 @@ export default function AppNavBar() {
     
     return (
 
-        <nav className="flex fixed w-full bg-canvas mx-auto min-h-14 justify-between md:justify-normal md:z-3 flex-wrap md:flex-nowrap items-center p-4 gap-11" aria-label="Main Navigation">
+        <nav className="flex fixed w-full bg-canvas border-b border-line mx-auto min-h-14 justify-between md:justify-normal md:z-3 flex-wrap md:flex-nowrap items-center p-4 gap-11" aria-label="Main Navigation">
 
             {/* Developer Name */}
 

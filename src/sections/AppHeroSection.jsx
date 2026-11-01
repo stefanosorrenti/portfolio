@@ -2,7 +2,7 @@ import portraitPlaceholder from "../assets/images/potrait-pic.png";
 
 export default function AppHeroSection() {
     return (
-        <section id="home" className="container mx-auto flex min-h-dvh flex-col justify-around gap-10 px-4 py-8 sm:gap-12 sm:px-6 sm:py-10 lg:gap-16 lg:px-8 lg:py-12 2xl:px-12">
+        <section id="home" className="container mx-auto flex min-h-dvh flex-col justify-around gap-10 px-4 pt-8 sm:gap-12 sm:px-6 sm:pt-10 lg:gap-16 lg:px-8 lg:pt-12 2xl:px-12">
             
             <div className="grid shrink-0 grid-cols-1 gap-6 md:grid-cols-2 md:items-start lg:gap-12 xl:gap-16 2xl:gap-20">
 
