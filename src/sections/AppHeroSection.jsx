@@ -1,5 +1,5 @@
 import portraitPlaceholder from "../assets/images/potrait-pic.png";
-
+import AppNavigationLink from "../components/AppNavigationLinks";
 export default function AppHeroSection() {
     return (
         <section id="home" className="container mx-auto flex min-h-dvh flex-col justify-around gap-10 px-4 pt-8 sm:gap-12 sm:px-6 sm:pt-10 lg:gap-16 lg:px-8 lg:pt-12 2xl:px-12">
@@ -23,9 +23,9 @@ export default function AppHeroSection() {
                     {/* CTA buttons */}
 
                     <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6">
-                        <a href="#projects" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] bg-brand px-4 py-2 text-sm font-medium text-white sm:px-6 lg:min-h-12 lg:px-8 hover:bg-brand/70">
+                        <AppNavigationLink to={"projects"} smooth={true} spy hashSpy={true} duration={600} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] bg-brand px-4 py-2 text-sm font-medium text-white sm:px-6 lg:min-h-12 lg:px-8 hover:bg-brand/70">
                             Scopri i progetti <span aria-hidden="true">&rarr;</span>
-                        </a>
+                        </AppNavigationLink>
                         <a href="sorrenti-stefano-cv.pdf" target="_blank" className="inline-flex min-h-11 items-center justify-center rounded-[3px] border border-faint px-4 py-2 text-sm font-medium text-ink sm:px-6 lg:min-h-12 lg:px-8 hover:bg-faint/10">
                             Vedi CV
                         </a>
