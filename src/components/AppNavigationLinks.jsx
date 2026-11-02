@@ -18,8 +18,8 @@ export default function AppNavigationLinks({ to, smooth, hashSpy, duration, acti
 
     return (
         <motion.span
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
         >
             <NavigationLink to={to} smooth={smooth} spy hashSpy={hashSpy} duration={duration} offset={SPY_OFFSET} activeClass={activeClass} className={className} onClick={onClick} onSetActive={onSetActive}>
 

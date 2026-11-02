@@ -56,9 +56,9 @@ export default function AppNavBar() {
                 {/* Navigation Links */}
 
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
+                    initial={{ opacity: 0, scale: 0.96 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.3 }} className="hidden  md:flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow shrink-0 p-3 ">
+                    transition={{ duration: 0.5, delay: 0 }} className="hidden  md:flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow shrink-0 p-3 ">
 
 
 
@@ -89,8 +89,8 @@ export default function AppNavBar() {
 
                                     transition={{
                                         type: "spring",
-                                        stiffness: 500,
-                                        damping: 30,
+                                        stiffness: 400,
+                                        damping: 38,
                                     }}
                                 />
                             )}
