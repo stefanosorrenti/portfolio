@@ -12,13 +12,15 @@ const NavigationLink = ScrollLink("a", { // Use the "a" tag for links
     },
 });
 
-export default function AppNavigationLinks({ to, smooth, hashSpy, duration, activeClass, className ="", onClick, children }) {
+export default function AppNavigationLinks({ to, smooth, hashSpy, duration, activeClass, className ="", onClick, onSetActive, children }) {
 
     
     
     return (
-        <NavigationLink to={to} smooth={smooth} spy hashSpy={hashSpy} duration={duration} offset={SPY_OFFSET} activeClass={activeClass} className={className} onClick={onClick}>
+        <>
+        <NavigationLink to={to} smooth={smooth} spy hashSpy={hashSpy} duration={duration} offset={SPY_OFFSET} activeClass={activeClass} className={className} onClick={onClick} onSetActive={onSetActive}>
             {children}
         </NavigationLink>
+        </>
     )
 }

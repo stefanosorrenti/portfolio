@@ -23,9 +23,9 @@ export default function AppHeroSection() {
                     {/* CTA buttons */}
 
                     <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6">
-                        <AppNavigationLink to={"projects"} smooth={true} spy hashSpy={true} duration={600} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] bg-brand px-4 py-2 text-sm font-medium text-white sm:px-6 lg:min-h-12 lg:px-8 hover:bg-brand/70">
+                       {/*  <AppNavigationLink to={"projects"} smooth={true} spy hashSpy={true} duration={600} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] bg-brand px-4 py-2 text-sm font-medium text-white sm:px-6 lg:min-h-12 lg:px-8 hover:bg-brand/70">
                             Scopri i progetti <span aria-hidden="true">&rarr;</span>
-                        </AppNavigationLink>
+                        </AppNavigationLink> */}
                         <a href="sorrenti-stefano-cv.pdf" target="_blank" className="inline-flex min-h-11 items-center justify-center rounded-[3px] border border-faint px-4 py-2 text-sm font-medium text-ink sm:px-6 lg:min-h-12 lg:px-8 hover:bg-faint/10">
                             Vedi CV
                         </a>

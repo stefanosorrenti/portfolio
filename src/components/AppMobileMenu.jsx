@@ -1,16 +1,25 @@
 import AppNavigationLink from "./AppNavigationLinks";
-
+import { motion } from "framer-motion";
 export default function AppMobileMenu({ isOpen, onClose, onOpen }) {
 
-
+    
     return (
 
 
-        <div className={`fixed inset-x-0 top-[4rem] z-40 bg-canvas border-b border-line md:hidden ${isOpen ? 'flex' : 'hidden'} flex-col items-start gap-2.5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer p-3 *:p-1 *:rounded-full`} id="mobile-menu" aria-label="Mobile Navigation">
+        <motion.div
+            className={`fixed inset-x-0 top-[4rem] z-40 bg-canvas border-b border-line md:hidden ${isOpen ? 'flex' : 'hidden'} flex-col items-start gap-2.5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer p-3 *:p-1 *:rounded-full`} id="mobile-menu"
+            aria-label="Mobile Navigation"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -20 }}
+            transition={{ duration: 0.2 }}
+            
+        >
+            
+
 
             {/* Navigation Links */}
 
-            <AppNavigationLink to={"home"} smooth={true} spy hashSpy={true} duration={600} activeClass="bg-brand/10 text-brand focus:bg-brand/10" onClick={onClose}>Home</AppNavigationLink>
+            <AppNavigationLink to={"home"} smooth={true} spy hashSpy={true} duration={600} activeClass="bg-brand/10 text-brand" onClick={onClose}>Home</AppNavigationLink>
             <AppNavigationLink to={"about"} smooth={true} spy hashSpy={true} duration={600} activeClass="bg-brand/10 text-brand" onClick={onClose}>Chi sono</AppNavigationLink>
             <AppNavigationLink to={"projects"} smooth={true} spy hashSpy={true} duration={600} activeClass="bg-brand/10 text-brand" onClick={onClose}>Progetti</AppNavigationLink>
             <AppNavigationLink to={"contacts"} smooth={true} spy hashSpy={true} duration={600} activeClass="bg-brand/10 text-brand" onClick={onClose}>Contatti</AppNavigationLink>
@@ -22,6 +31,6 @@ export default function AppMobileMenu({ isOpen, onClose, onOpen }) {
                 </svg>
             </button>
 
-        </div>
+        </motion.div>
     )
 }

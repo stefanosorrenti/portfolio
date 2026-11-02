@@ -1,20 +1,28 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import AppMobileMenu from "./AppMobileMenu";
 import AppSettings from "./AppSettings";
 import AppNavigationLink from "./AppNavigationLinks";
-
 export default function AppNavBar() {
+
+    //DATA
+    const navItems = [
+        { to: "home", label: "Home" },
+        { to: "about", label: "Chi sono" },
+        { to: "projects", label: "Progetti" },
+        { to: "contacts", label: "Contatti" },
+    ];
 
     //USE STATE
     const [isOpen, setIsOpen] = useState(false)
     const [isSettingsOpen, setIsSettingsOpen] = useState(false)
-    
-    
+    const [activeItem, setActiveItem] = useState("home")
 
-    
+
+
     return (
         <>
-            <nav className="flex fixed z-50 w-full bg-canvas border-b border-line mx-auto h-[4rem] justify-between md:justify-normal md:z-3  items-center p-4 gap-11" aria-label="Main Navigation">
+            <motion.nav className="flex fixed z-50 w-full bg-canvas border-b border-line mx-auto h-[4rem] justify-between md:justify-normal md:z-3  items-center p-4 gap-11" aria-label="Main Navigation" layoutRoot>
 
                 {/* Developer Name */}
 
@@ -47,13 +55,42 @@ export default function AppNavBar() {
 
                 {/* Navigation Links */}
 
-                <div className="hidden  md:flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow *:hover:bg-brand/10 *:hover:text-brand cursor-pointer shrink-0 p-3 *:p-1  *:rounded-full">
+                <div className="hidden  md:flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow shrink-0 p-3 ">
+                    {navItems.map((item) => (
+                        <AppNavigationLink
+                            key={item.to}
+                            to={item.to}
+                            smooth={true}
+                            spy={true}
+                            hashSpy={true}
+                            duration={600}
+                            className={`relative p-1 hover:text-brand hover:bg-brand/10 rounded-full ${activeItem === item.to
+                                ? "text-brand"
+                                : "hover:text-brand"}`}
+                            onClick={() => setIsOpen(false)}
+                            onSetActive={() => setActiveItem(item.to)}
+                        >
 
-                    <AppNavigationLink to={"home"} smooth={true} spy hashSpy={true} duration={600}  activeClass="bg-brand/10 text-brand focus:bg-brand/10"  onClick={() => setIsOpen(false)}>Home</AppNavigationLink>
-                    <AppNavigationLink to={"about"} smooth={true} spy hashSpy={true} duration={600}  activeClass="bg-brand/10 text-brand"  onClick={() => setIsOpen(false)}>Chi sono</AppNavigationLink>
-                    <AppNavigationLink to={"projects"} smooth={true} spy hashSpy={true} duration={600}  activeClass="bg-brand/10 text-brand"   onClick={() => setIsOpen(false)}>Progetti</AppNavigationLink>
-                    <AppNavigationLink to={"contacts"} smooth={true} spy hashSpy={true} duration={600}  activeClass="bg-brand/10 text-brand"   onClick={() => setIsOpen(false)}>Contatti</AppNavigationLink>
 
+                            {/* Background pills */}
+                            {activeItem === item.to && (
+                                <motion.span
+                                    layoutId="desktop-nav-pill"
+                                    aria-hidden="true"
+                                    className="absolute inset-0 bg-brand/10 rounded-full"
+
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 500,
+                                        damping: 30,
+                                    }}
+                                />
+                            )}
+
+                            {/* Text */}
+                            {item.label}
+                        </AppNavigationLink>
+                    ))}
                 </div>
 
                 <span aria-hidden="true" className="hidden md:block h-12 w-px shrink-0 bg-line" /> {/* Separator */}
@@ -68,11 +105,11 @@ export default function AppNavBar() {
 
                 </button>
 
-            </nav>
+            </motion.nav>
 
             {/* Mobile Menu */}
 
-             <AppMobileMenu isOpen={isOpen} onClose={() => setIsOpen(false)} onOpen={() => { setIsSettingsOpen(true) }} />
+            <AppMobileMenu isOpen={isOpen} onClose={() => setIsOpen(false)} onOpen={() => { setIsSettingsOpen(true) }} />
 
             {/* Menu Settings */}
             {isSettingsOpen && <AppSettings onSettingClose={() => setIsSettingsOpen(false)} onClose={() => setIsOpen(false)} />}
