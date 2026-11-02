@@ -44,7 +44,7 @@ export default function AppProjectCard({ project, animationDelay = 0 }) {
 
                     (
                         <p className="px-2 text-sm leading-normal wrap-break-word text-body md:text-base md:leading-relaxed">
-                            {project.description.substring(0, 120)} <button className="text-brand cursor-pointer italic" onClick={() => setIsModalOpen(true)}>...scopri di più</button>
+                            {project.description.substring(0, 120)} <button className="text-brand cursor-pointer italic hover:text-brand/70 " onClick={() => setIsModalOpen(true)}>...scopri di più</button>
                         </p>
 
                     )

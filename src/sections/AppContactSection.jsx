@@ -51,7 +51,12 @@ export default function AppContactSection() {
                         initial={{ opacity: 0, y: -24 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        transition={{ duration: 0.95, delay: 0.32 }}
+                        transition={{
+                            duration: 0.95,
+                            delay: 0.32,
+                            scale: { duration: 0.2, delay: 0 },
+                        }}
+                        whileHover={{ scale: 1.1, transition: { duration: 0.2, delay: 0 } }}
                         href="https://github.com/stefanosorrenti"
                         aria-label="GitHub"
                         target="_blank"
@@ -66,7 +71,12 @@ export default function AppContactSection() {
                         initial={{ opacity: 0, y: -24 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        transition={{ duration: 0.95, delay: 0.48 }}
+                        transition={{
+                            duration: 0.95,
+                            delay: 0.48,
+                            scale: { duration: 0.2, delay: 0 },
+                        }}
+                        whileHover={{ scale: 1.1, transition: { duration: 0.2, delay: 0 } }}
                         href="https://www.linkedin.com/in/stefano-sorrenti-7797b7413/"
                         aria-label="LinkedIn"
                         target="_blank"
@@ -81,7 +91,12 @@ export default function AppContactSection() {
                         initial={{ opacity: 0, y: -24 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        transition={{ duration: 0.95, delay: 0.64 }}
+                        transition={{
+                            duration: 0.95,
+                            delay: 0.64,
+                            scale: { duration: 0.2, delay: 0 },
+                        }}
+                        whileHover={{ scale: 1.1, transition: { duration: 0.2, delay: 0 } }}
                         href="mailto:stefanosorrenti01@gmail.com"
                         aria-label="Email"
                         
