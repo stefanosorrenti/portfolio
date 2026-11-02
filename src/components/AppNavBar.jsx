@@ -55,7 +55,15 @@ export default function AppNavBar() {
 
                 {/* Navigation Links */}
 
-                <div className="hidden  md:flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow shrink-0 p-3 ">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.3 }} className="hidden  md:flex items-center justify-end gap-5 text-[0.9rem] leading-[1.2rem] font-medium grow shrink-0 p-3 ">
+
+
+
+
+
                     {navItems.map((item) => (
                         <AppNavigationLink
                             key={item.to}
@@ -66,7 +74,7 @@ export default function AppNavBar() {
                             duration={600}
                             className={`relative p-1 hover:text-brand hover:bg-brand/10 rounded-full ${activeItem === item.to
                                 ? "text-brand"
-                                : "hover:text-brand"}`}
+                                : ""}`}
                             onClick={() => setIsOpen(false)}
                             onSetActive={() => setActiveItem(item.to)}
                         >
@@ -91,7 +99,8 @@ export default function AppNavBar() {
                             {item.label}
                         </AppNavigationLink>
                     ))}
-                </div>
+
+                </motion.div>
 
                 <span aria-hidden="true" className="hidden md:block h-12 w-px shrink-0 bg-line" /> {/* Separator */}
 
