@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function AppContactSection() {
     return (
 
@@ -10,7 +12,12 @@ export default function AppContactSection() {
             >
 
                 {/* Title */}
-                <div className="lg:flex lg:flex-col lg:justify-center">
+                <motion.div className="lg:flex lg:flex-col lg:justify-center"
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 1.05, delay: 0 }}
+                >
                     <span className="mb-[9px] block text-[11px] leading-[14px] font-medium tracking-[0.32em] text-muted uppercase md:mb-3 lg:text-xs lg:leading-4 xl:mb-4">
                         Contatti
                     </span>
@@ -20,22 +27,31 @@ export default function AppContactSection() {
                     >
                         Diamo forma alla <br /> tua prossima <span className="text-brand">idea.</span>
                     </h2>
-                </div>
+                </motion.div>
 
 
                 {/* Description */}
-                <div className="flex lg:items-center">
+                <motion.div className="flex lg:items-center"
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 1, delay: 0.16 }}
+                >
                     <p className="max-w-[420px] text-base leading-[1.5] text-body sm:max-w-md md:max-w-lg md:text-lg md:leading-relaxed lg:max-w-xl xl:max-w-2xl xl:text-xl 2xl:max-w-3xl">
                         Sono aperto a nuove opportunità e collaborazioni, ma anche a una chiacchierata su tecnologia, idee o ottica.
                         <br className="hidden md:block" />
                         Hai un progetto in mente? Scrivimi!
                     </p>
-                </div>
+                </motion.div>
 
 
                 {/* Links */}
                 <div className="flex flex-wrap items-center gap-3 sm:gap-3.5 md:gap-4 lg:justify-center lg:gap-5 lg:border-l lg:border-line xl:gap-6 2xl:gap-7">
-                    <a
+                    <motion.a
+                        initial={{ opacity: 0, y: -24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.95, delay: 0.32 }}
                         href="https://github.com/stefanosorrenti"
                         aria-label="GitHub"
                         target="_blank"
@@ -44,9 +60,13 @@ export default function AppContactSection() {
                         <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5 fill-current md:size-6 xl:size-7">
                             <path d="M12 .7A11.5 11.5 0 0 0 8.36 23.1c.58.1.79-.25.79-.56v-2.23c-3.23.7-3.91-1.37-3.91-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.58-.3-5.29-1.29-5.29-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.05 0 0 .97-.31 3.16 1.18a10.96 10.96 0 0 1 5.76 0C17.03 4.98 18 5.29 18 5.29c.63 1.59.23 2.77.11 3.06.74.81 1.19 1.83 1.19 3.09 0 4.42-2.72 5.39-5.31 5.68.42.36.79 1.07.79 2.16v3.25c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z" />
                         </svg>
-                    </a>
+                    </motion.a>
 
-                    <a
+                    <motion.a
+                        initial={{ opacity: 0, y: -24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.95, delay: 0.48 }}
                         href="https://www.linkedin.com/in/stefano-sorrenti-7797b7413/"
                         aria-label="LinkedIn"
                         target="_blank"
@@ -55,9 +75,13 @@ export default function AppContactSection() {
                         <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5 fill-current md:size-6 xl:size-7">
                             <path d="M5.37 7.98H1.58V20h3.79V7.98ZM3.47 2A2.2 2.2 0 1 0 3.47 6.4 2.2 2.2 0 0 0 3.47 2ZM20 13.11c0-3.62-1.93-5.3-4.51-5.3a3.9 3.9 0 0 0-3.55 1.95h-.05V7.98H8.25V20h3.79v-5.95c0-1.57.3-3.09 2.25-3.09 1.92 0 1.94 1.8 1.94 3.2V20H20v-6.89Z" />
                         </svg>
-                    </a>
+                    </motion.a>
 
-                    <a
+                    <motion.a
+                        initial={{ opacity: 0, y: -24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.95, delay: 0.64 }}
                         href="mailto:stefanosorrenti01@gmail.com"
                         aria-label="Email"
                         
@@ -66,7 +90,7 @@ export default function AppContactSection() {
                         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className="size-5 stroke-current md:size-6 xl:size-7" strokeWidth="1.8">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5v10.5H3.75V6.75Zm.75.75 7.5 6 7.5-6" />
                         </svg>
-                    </a>
+                    </motion.a>
                 </div>
 
             </section>
