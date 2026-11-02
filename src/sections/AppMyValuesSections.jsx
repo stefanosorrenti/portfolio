@@ -11,8 +11,8 @@ export default function AppMyValuesSections() {
                 aria-label="My values section"
             >
                 <motion.h3 className="mb-2 text-xs leading-4 font-medium tracking-[0.24em] text-muted uppercase md:mb-4 lg:mb-6 xl:mb-8"
-                    initial={{ opacity: 0, y: 12 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.9, delay: 0 }}
                 >
@@ -29,8 +29,8 @@ export default function AppMyValuesSections() {
                             {/* Icon */}
 
                             <motion.svg
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                initial={{ opacity: 0, x: 20, scale: 0.9 }}
+                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
                                 viewport={{ once: true, amount: 0.5 }}
                                 transition={{ duration: 0.8, delay: 0.12 }}
                                 xmlns="http://www.w3.org/2000/svg"
@@ -51,16 +51,16 @@ export default function AppMyValuesSections() {
 
                             <div>
                                 <motion.h4 className="text-lg leading-snug font-semibold tracking-tight text-ink md:text-xl xl:text-2xl"
-                                    initial={{ opacity: 0, y: 12 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
                                     transition={{ duration: 0.85, delay: 0.22 }}
                                 >
                                     Creatività
                                 </motion.h4>
                                 <motion.p className="mt-1 text-base leading-normal text-body md:mt-2 md:leading-relaxed xl:text-lg"
-                                    initial={{ opacity: 0, y: 12 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
                                     transition={{ duration: 0.85, delay: 0.32 }}
                                 >
@@ -78,8 +78,8 @@ export default function AppMyValuesSections() {
                             {/* Icon */}
 
                             <motion.svg
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                initial={{ opacity: 0, x: 20, scale: 0.9 }}
+                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
                                 viewport={{ once: true, amount: 0.5 }}
                                 transition={{ duration: 0.8, delay: 0.24 }}
                                 xmlns="http://www.w3.org/2000/svg"
@@ -99,16 +99,16 @@ export default function AppMyValuesSections() {
 
                             <div>
                                 <motion.h4 className="text-lg leading-snug font-semibold tracking-tight text-ink md:text-xl xl:text-2xl"
-                                    initial={{ opacity: 0, y: 12 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
                                     transition={{ duration: 0.85, delay: 0.34 }}
                                 >
                                     Precisione
                                 </motion.h4>
                                 <motion.p className="mt-1 text-base leading-normal text-body md:mt-2 md:leading-relaxed xl:text-lg"
-                                    initial={{ opacity: 0, y: 12 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
                                     transition={{ duration: 0.85, delay: 0.44 }}
                                 >
@@ -126,8 +126,8 @@ export default function AppMyValuesSections() {
 
                             {/* Icon */}
                             <motion.svg
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                initial={{ opacity: 0, x: 20, scale: 0.9 }}
+                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
                                 viewport={{ once: true, amount: 0.5 }}
                                 transition={{ duration: 0.8, delay: 0.36 }}
                                 xmlns="http://www.w3.org/2000/svg"
@@ -148,16 +148,16 @@ export default function AppMyValuesSections() {
 
                             <div>
                                 <motion.h4 className="text-lg leading-snug font-semibold tracking-tight text-ink md:text-xl xl:text-2xl"
-                                    initial={{ opacity: 0, y: 12 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
                                     transition={{ duration: 0.85, delay: 0.46 }}
                                 >
                                     Crescita continua
                                 </motion.h4>
                                 <motion.p className="mt-1 text-base leading-normal text-body md:mt-2 md:leading-relaxed xl:text-lg"
-                                    initial={{ opacity: 0, y: 12 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
                                     transition={{ duration: 0.85, delay: 0.56 }}
                                 >
