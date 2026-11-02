@@ -19,8 +19,8 @@ export default function AppProjectsSection() {
                 {/* Projects */}
 
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
-                    {projects.map((project) => (
-                        <AppProjectCard key={project.id} project={project} />
+                    {projects.map((project, index) => (
+                        <AppProjectCard key={project.id} project={project} animationDelay={index * 0.12} />
                     ))}
                 </div>
 

@@ -2,9 +2,10 @@
 
 import AppCardDetail from "./AppCardDetail";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 
-export default function AppProjectCard({ project }) {
+export default function AppProjectCard({ project, animationDelay = 0 }) {
 
 
     // STATE FOR MODAL
@@ -20,7 +21,12 @@ export default function AppProjectCard({ project }) {
 
             {/* Project card */}
 
-            <div className="flex flex-col rounded border border-line bg-surface p-2 font-sans md:p-3">
+            <motion.div className="flex flex-col rounded border border-line bg-surface p-2 font-sans md:p-3"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.85, delay: animationDelay }}
+            >   
                 {/* Image */}
                 <div className="aspect-video w-full shrink-0 overflow-hidden rounded-sm">
                     <img className="h-full w-full object-cover" src={project.images[0]} alt="placeholder" />
@@ -58,7 +64,7 @@ export default function AppProjectCard({ project }) {
                     <span key={i} className="rounded-full bg-badge px-3 py-2 text-xs leading-4 text-brand lg:text-sm lg:leading-5">{technology}</span>
                 ))}
             </div>
-        </div >
+        </motion.div >
         </>
     )
 }
