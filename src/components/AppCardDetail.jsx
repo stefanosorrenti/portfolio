@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import AppImgModal from './AppImgModal';
+import { motion } from 'framer-motion';
 export default function AppCardDetail({ onClose, project }) {
 
 
@@ -46,9 +47,16 @@ export default function AppCardDetail({ onClose, project }) {
 
     return (
         /* Modal backdrop */
-        <div className="fixed inset-0 z-60 flex items-end justify-center bg-black/75 md:items-center md:p-4 lg:p-6">
+        <motion.div className="fixed inset-0 z-60 flex items-end justify-center bg-black/75 md:items-center md:p-4 lg:p-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.25 }}
+        >
             {/* Modal content */}
-            <div
+            <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, ease: "easeOut" }}
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="project-modal-title"
@@ -74,15 +82,15 @@ export default function AppCardDetail({ onClose, project }) {
                         <div>
                             {/* Title and subtitle */}
                             <div>
-                                <h5 id="project-modal-title" className="text-3xl leading-tight font-bold tracking-tight text-ink md:text-4xl lg:text-5xl">
+                                <motion.h5 id="project-modal-title" className="text-3xl leading-tight font-bold tracking-tight text-ink md:text-4xl lg:text-5xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.06 }}>
                                     {project.title}.
-                                </h5>
-                                <p className="mt-1 text-base leading-6 text-body lg:text-lg lg:leading-7">{project.subtitle} ({project.year}).</p>
+                                </motion.h5>
+                                <motion.p className="mt-1 text-base leading-6 text-body lg:text-lg lg:leading-7" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.1 }}>{project.subtitle} ({project.year}).</motion.p>
                             </div>
 
                             {/* Image */}
                             <div className="mt-5 mb-8 md:mb-10">
-                                <figure className="relative aspect-5/3 overflow-hidden rounded-lg border border-line bg-soft">
+                                <motion.figure className="relative aspect-5/3 overflow-hidden rounded-lg border border-line bg-soft" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.12 }}>
                                     <img
                                         className="h-full w-full object-cover"
                                         src={project.images[currentIndex]}
@@ -94,7 +102,7 @@ export default function AppCardDetail({ onClose, project }) {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                                         </svg>
                                     </button>
-                                </figure>
+                                </motion.figure>
                                 {/* Buttons and image carousel dots */}
                                 <div className="flex items-center justify-center gap-4 p-3">
 
@@ -129,13 +137,13 @@ export default function AppCardDetail({ onClose, project }) {
                         <div className={`flex flex-col justify-evenly lg:border-l lg:border-line lg:pl-6`}>
                             <div className="flex flex-col md:flex-row md:border-b md:border-line lg:flex-col lg:border-b-0">
                                 {/* Overview */}
-                                <section className="border-b border-line pb-5 md:border-b-0 md:basis-[60%] lg:basis-auto lg:border-b lg:pb-5">
+                                <motion.section className="border-b border-line pb-5 md:border-b-0 md:basis-[60%] lg:basis-auto lg:border-b lg:pb-5" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.18 }}>
                                     <h6 className="text-xs leading-5 font-semibold tracking-[0.25em] text-muted uppercase">Overview</h6>
                                     <p className="mt-2 text-base leading-relaxed text-body xl:text-lg">{project.description}</p>
-                                </section>
+                                </motion.section>
 
                                 {/* Features */}
-                                <section className="border-b border-line py-5 md:border-b-0 md:pt-0 lg:border-b lg:pt-5">
+                                <motion.section className="border-b border-line py-5 md:border-b-0 md:pt-0 lg:border-b lg:pt-5" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.24 }}>
                                     <h6 className="text-xs leading-5 font-semibold tracking-[0.25em] text-muted uppercase">Funzionalità principali</h6>
                                     <ul className="mt-3 space-y-2 text-base leading-7 text-body xl:text-lg">
 
@@ -150,11 +158,11 @@ export default function AppCardDetail({ onClose, project }) {
                                         ))}
 
                                     </ul>
-                                </section>
+                                </motion.section>
                             </div>
 
                             {/* Technologies */}
-                            <section className="border-b border-line py-5">
+                            <motion.section className="border-b border-line py-5" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.3 }}>
                                 <h6 className="text-xs leading-5 font-semibold tracking-[0.25em] text-muted uppercase">Stack tecnologico</h6>
                                 <ul className="mt-3 flex flex-wrap gap-2">
                                     {project.technologies.map((tech, index) => (
@@ -163,7 +171,7 @@ export default function AppCardDetail({ onClose, project }) {
                                         </li>
                                     ))}
                                 </ul>
-                            </section>
+                            </motion.section>
 
 
                             {/* Buttons */}
@@ -173,39 +181,39 @@ export default function AppCardDetail({ onClose, project }) {
                                 {/* Live URL button */}
                                 {project.liveUrl && (
 
-                                    <a className={`inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md border border-brand bg-brand px-4 py-3 text-base font-semibold text-white`}>
+                                    <motion.a className={`inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-md border border-brand bg-brand px-4 py-3 text-base font-semibold text-white`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.35, delay: 0.36 }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.75} stroke="currentColor" className="size-5" aria-hidden="true">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                         </svg>
                                         Vedi progetto
-                                    </a>
+                                    </motion.a>
                                 )}
 
                                 {/* Frontend repo url */}
                                 {project.repoUrlFrontend && (
-                                    <a href={project.repoUrlFrontend} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 w-full cursor-pointer items-center justify-center gap-3 rounded-md border border-faint bg-surface px-4 py-3 text-base font-semibold text-ink">
+                                    <motion.a href={project.repoUrlFrontend} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 w-full cursor-pointer items-center justify-center gap-3 rounded-md border border-faint bg-surface px-4 py-3 text-base font-semibold text-ink" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.35, delay: 0.42 }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="size-5" aria-hidden="true">
                                             <path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.02 1.75 2.68 1.24 3.33.95.1-.73.4-1.23.71-1.51-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.8 10.8 0 0 1 5.62 0c2.15-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.69.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z" />
                                         </svg>
                                         VEDI FRONTEND
-                                    </a>
+                                    </motion.a>
                                 )}
 
                                 {/* Backend repo url */}
                                 {project.repoUrlBackend && (
-                                    <a href={project.repoUrlBackend} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 w-full cursor-pointer items-center justify-center gap-3 rounded-md border border-faint bg-surface px-4 py-3 text-base font-semibold text-ink">
+                                    <motion.a href={project.repoUrlBackend} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 w-full cursor-pointer items-center justify-center gap-3 rounded-md border border-faint bg-surface px-4 py-3 text-base font-semibold text-ink" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.35, delay: 0.48 }}>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="size-5" aria-hidden="true">
                                             <path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.02 1.75 2.68 1.24 3.33.95.1-.73.4-1.23.71-1.51-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.8 10.8 0 0 1 5.62 0c2.15-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.69.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z" />
                                         </svg>
                                         VEDI BACKEND
-                                    </a>
+                                    </motion.a>
                                 )}
 
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }
