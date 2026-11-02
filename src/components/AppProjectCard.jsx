@@ -24,7 +24,7 @@ export default function AppProjectCard({ project, animationDelay = 0 }) {
             <motion.div className="flex flex-col rounded border border-line bg-surface p-2 font-sans md:p-3"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.85, delay: animationDelay }}
             >   
                 {/* Image */}
