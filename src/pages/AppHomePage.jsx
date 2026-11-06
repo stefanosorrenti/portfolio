@@ -10,7 +10,7 @@ export function AppHomePage() {
 
 
     return (
-        <>
+        <main>
             <AppHeroSection />
 
             <div id="about">
@@ -24,6 +24,6 @@ export function AppHomePage() {
             </div>
             
             <AppContactSection />
-        </>
+        </main>
     )
 }
